@@ -282,7 +282,7 @@ class IMAP4(object):
         # Need to quote "atom-specials" :-
         #   "(" / ")" / "{" / SP / 0x00 - 0x1f / 0x7f / "%" / "*" / DQUOTE / "\" / "]"
         # so match not the inverse set
-    mustquote_cre = re.compile(r"[^!#$&'+,./0-9:;<=>?@A-Z\[^_`a-z|}~-]")
+    mustquote_cre = re.compile(r"[^!#$&'+,./0-9:;<=>?@A-Z\[^_'a-z|}~-]")
     response_code_cre = re.compile(r'\[(?P<type>[A-Z-]+)( (?P<data>[^\]]*))?\]')
     # sequence_set_cre = re.compile(r"^[0-9]+(:([0-9]+|\*))?(,[0-9]+(:([0-9]+|\*))?)*$")
     untagged_response_cre = re.compile(r'\* (?P<type>[A-Z-]+)( (?P<data>.*))?')
@@ -605,7 +605,7 @@ class IMAP4(object):
     def append(self, mailbox, flags, date_time, message, **kw):
         """(typ, [data]) = append(mailbox, flags, date_time, message)
         Append message to named mailbox.
-        All args except `message' can be None."""
+        All args except 'message' can be None."""
 
         name = 'APPEND'
         if not mailbox:
@@ -1602,7 +1602,7 @@ class IMAP4(object):
             tag = rqb.tag
         self.tagged_commands[tag] = rqb
         self.commands_lock.release()
-        if __debug__: self._log(4, '_request_push(%s, %s, %s) = %s' % (tag, name, `kw`, rqb.tag))
+        if __debug__: self._log(4, '_request_push(%s, %s, %s) = %s' % (tag, name, 'kw', rqb.tag))
         return rqb
 
 
@@ -1702,7 +1702,7 @@ class IMAP4(object):
 
         self.Terminate = True
 
-        if __debug__: self._log(1, 'terminating: %s' % `val`)
+        if __debug__: self._log(1, 'terminating: %s' % 'val')
 
         while not self.ouq.empty():
             try:
@@ -1755,7 +1755,7 @@ class IMAP4(object):
                 timeout = read_poll_timeout
             try:
                 r = poll.poll(timeout)
-                if __debug__: self._log(5, 'poll => %s' % `r`)
+                if __debug__: self._log(5, 'poll => %s' % 'r')
                 if not r:
                     continue                                    # Timeout
 
@@ -1912,7 +1912,7 @@ class IMAP4(object):
 
             self._cmd_log_len = 20
             self._cmd_log_idx = 0
-            self._cmd_log = {}           # Last `_cmd_log_len' interactions
+            self._cmd_log = {}           # Last '_cmd_log_len' interactions
             if self.debug:
                 self._mesg('imaplib2 version %s' % __version__)
                 self._mesg('imaplib2 debug level %s, buffer level %s' % (self.debug, self.debug_buf_lvl))
@@ -1949,7 +1949,7 @@ class IMAP4(object):
                 if lvl != 1:
                     return
 
-            # Keep log of last `_cmd_log_len' interactions for debugging.
+            # Keep log of last '_cmd_log_len' interactions for debugging.
             self.debug_lock.acquire()
             self._cmd_log[self._cmd_log_idx] = (line, tn, time.time())
             self._cmd_log_idx += 1
@@ -2475,11 +2475,11 @@ if __name__ == '__main__':
             run('append', (None, None, None, test_mesg), cb=False)
             num = run('search', (None, 'ALL'), cb=False)[0].split()[0]
             dat = run('fetch', (num, '(FLAGS INTERNALDATE RFC822)'), cb=False)
-            M._mesg('fetch %s => %s' % (num, `dat`))
+            M._mesg('fetch %s => %s' % (num, 'dat'))
             run('idle', (2,))
             run('store', (num, '-FLAGS', '(\Seen)'), cb=False),
             dat = run('fetch', (num, '(FLAGS INTERNALDATE RFC822)'), cb=False)
-            M._mesg('fetch %s => %s' % (num, `dat`))
+            M._mesg('fetch %s => %s' % (num, 'dat'))
             run('uid', ('STORE', num, 'FLAGS', '(\Deleted)'))
             run('expunge', ())
             if idle_intr:
