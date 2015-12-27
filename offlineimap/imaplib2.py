@@ -377,7 +377,7 @@ class IMAP4(object):
             elif self._get_untagged_response('OK'):
                 if __debug__: self._log(1, 'state => NONAUTH')
             else:
-                raise self.error('unrecognised server welcome message: %s' % `self.welcome`)
+                raise self.error('unrecognised server welcome message: %s' % 'self.welcome')
 
             typ, dat = self.capability()
             if dat == [None]:
