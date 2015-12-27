@@ -14,10 +14,8 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program; if not, write to the Free Software
 #    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
-
 import email
-from email.Parser import Parser as MailParser
-import time
+from email.parser import Parser as MailParser
 
 def get_message_date(content, header='Date'):
     """
@@ -25,7 +23,6 @@ def get_message_date(content, header='Date'):
 
     :param header: the header to extract date from;
     :returns: timestamp or `None` in the case of failure.
-    
     """
     message = MailParser().parsestr(content, True)
     dateheader = message.get(header)

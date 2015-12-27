@@ -1,116 +1,10 @@
-************* Module offlineimap.repository.Base
-W:263, 0: TODO: We don't delete folders right now. (fixme)
+************* Module offlineimap.emailutil
 C:  1, 0: Missing module docstring (missing-docstring)
-C: 27, 8: Invalid attribute name "ui" (invalid-name)
-C: 24, 0: Missing class docstring (missing-docstring)
-R: 24, 0: Too many instance attributes (13/7) (too-many-instance-attributes)
-C: 80, 4: Missing method docstring (missing-docstring)
-C: 83, 4: Missing method docstring (missing-docstring)
-C: 86, 4: Missing method docstring (missing-docstring)
-C: 89, 4: Missing method docstring (missing-docstring)
-C:100, 4: Missing method docstring (missing-docstring)
-C:103, 4: Missing method docstring (missing-docstring)
-C:106, 4: Missing method docstring (missing-docstring)
-C:109, 4: Missing method docstring (missing-docstring)
-C:117, 4: Missing method docstring (missing-docstring)
-R:120, 4: Method could be a function (no-self-use)
-C:129, 4: Missing method docstring (missing-docstring)
-C:148, 4: Missing method docstring (missing-docstring)
-C:151, 4: Missing method docstring (missing-docstring)
-R:154, 4: Too many local variables (17/15) (too-many-locals)
-C:193,43: Invalid variable name "e" (invalid-name)
-C:253,43: Invalid variable name "e" (invalid-name)
-R:154, 4: Too many branches (15/12) (too-many-branches)
-R:280, 4: Method could be a function (no-self-use)
-R: 24, 0: Too many public methods (30/20) (too-many-public-methods)
-R: 24, 0: Abstract class not referenced (abstract-class-not-used)
 
 
 Report
 ======
-133 statements analysed.
-
-Raw metrics
------------
-
-+----------+-------+------+---------+-----------+
-|type      |number |%     |previous |difference |
-+==========+=======+======+=========+===========+
-|code      |162    |62.31 |159      |+3.00      |
-+----------+-------+------+---------+-----------+
-|docstring |48     |18.46 |48       |=          |
-+----------+-------+------+---------+-----------+
-|comment   |27     |10.38 |27       |=          |
-+----------+-------+------+---------+-----------+
-|empty     |23     |8.85  |23       |=          |
-+----------+-------+------+---------+-----------+
-
-
-
-Messages by category
---------------------
-
-+-----------+-------+---------+-----------+
-|type       |number |previous |difference |
-+===========+=======+=========+===========+
-|convention |17     |18       |-1.00      |
-+-----------+-------+---------+-----------+
-|refactor   |7      |7        |=          |
-+-----------+-------+---------+-----------+
-|warning    |1      |2        |-1.00      |
-+-----------+-------+---------+-----------+
-|error      |0      |0        |=          |
-+-----------+-------+---------+-----------+
-
-
-
-Messages
---------
-
-+-----------------------------+------------+
-|message id                   |occurrences |
-+=============================+============+
-|missing-docstring            |14          |
-+-----------------------------+------------+
-|invalid-name                 |3           |
-+-----------------------------+------------+
-|no-self-use                  |2           |
-+-----------------------------+------------+
-|too-many-public-methods      |1           |
-+-----------------------------+------------+
-|too-many-locals              |1           |
-+-----------------------------+------------+
-|too-many-instance-attributes |1           |
-+-----------------------------+------------+
-|too-many-branches            |1           |
-+-----------------------------+------------+
-|fixme                        |1           |
-+-----------------------------+------------+
-|abstract-class-not-used      |1           |
-+-----------------------------+------------+
-
-
-
-Global evaluation
------------------
-Your code has been rated at 8.12/10 (previous run: 7.97/10, +0.15)
-
-Statistics by type
-------------------
-
-+---------+-------+-----------+-----------+------------+---------+
-|type     |number |old number |difference |%documented |%badname |
-+=========+=======+===========+===========+============+=========+
-|module   |1      |1          |=          |0.00        |0.00     |
-+---------+-------+-----------+-----------+------------+---------+
-|class    |1      |1          |=          |0.00        |0.00     |
-+---------+-------+-----------+-----------+------------+---------+
-|method   |27     |27         |=          |55.56       |0.00     |
-+---------+-------+-----------+-----------+------------+---------+
-|function |0      |0          |=          |0           |0        |
-+---------+-------+-----------+-----------+------------+---------+
-
-
+10 statements analysed.
 
 Duplication
 -----------
@@ -125,14 +19,69 @@ Duplication
 
 
 
-External dependencies
----------------------
-::
+Statistics by type
+------------------
 
-    offlineimap 
-      \-CustomConfig (offlineimap.repository.Base)
-      \-error (offlineimap.repository.Base)
-      \-ui (offlineimap.repository.Base)
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |1      |1          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|method   |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|function |1      |1          |=          |100.00      |0.00     |
++---------+-------+-----------+-----------+------------+---------+
 
 
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |9      |25.00 |10       |-1.00      |
++----------+-------+------+---------+-----------+
+|docstring |6      |16.67 |7        |-1.00      |
++----------+-------+------+---------+-----------+
+|comment   |18     |50.00 |18       |=          |
++----------+-------+------+---------+-----------+
+|empty     |3      |8.33  |4        |-1.00      |
++----------+-------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |1      |2        |-1.00      |
++-----------+-------+---------+-----------+
+|refactor   |0      |0        |=          |
++-----------+-------+---------+-----------+
+|warning    |0      |1        |-1.00      |
++-----------+-------+---------+-----------+
+|error      |0      |1        |-1.00      |
++-----------+-------+---------+-----------+
+
+
+
+Messages
+--------
+
++------------------+------------+
+|message id        |occurrences |
++==================+============+
+|missing-docstring |1           |
++------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at 9.00/10 (previous run: 2.73/10, +6.27)
 
