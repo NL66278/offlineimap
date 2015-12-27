@@ -1384,7 +1384,7 @@ class IMAP4(object):
         return typ, dat
 
 
-    def _command_completer(self, (response, cb_arg, error)):
+    def _command_completer(self, response, cb_arg, error):
 
         # Called for callback commands
         rqb, kw = cb_arg
