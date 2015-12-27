@@ -1,625 +1,292 @@
 ************* Module offlineimap.imaplib2
-C:119, 0: Wrong hanging indentation (remove 4 spaces).
-        # name            valid states             asynchronous
-    |   ^ (bad-continuation)
-C:120, 0: Wrong hanging indentation (remove 4 spaces).
-        'APPEND':       ((AUTH, SELECTED),            False),
-    |   ^ (bad-continuation)
-C:120, 0: Exactly one space required after comma
-        'APPEND':       ((AUTH, SELECTED),            False),
-                                         ^ (bad-whitespace)
-C:121, 0: Wrong hanging indentation (remove 4 spaces).
-        'AUTHENTICATE': ((NONAUTH,),                  False),
-    |   ^ (bad-continuation)
-C:121, 0: Exactly one space required after comma
-        'AUTHENTICATE': ((NONAUTH,),                  False),
-                                   ^ (bad-whitespace)
-C:122, 0: Wrong hanging indentation (remove 4 spaces).
-        'CAPABILITY':   ((NONAUTH, AUTH, SELECTED),   True),
-    |   ^ (bad-continuation)
-C:122, 0: Exactly one space required after comma
-        'CAPABILITY':   ((NONAUTH, AUTH, SELECTED),   True),
-                                                  ^ (bad-whitespace)
-C:123, 0: Wrong hanging indentation (remove 4 spaces).
-        'CHECK':        ((SELECTED,),                 True),
-    |   ^ (bad-continuation)
-C:123, 0: Exactly one space required after comma
-        'CHECK':        ((SELECTED,),                 True),
-                                    ^ (bad-whitespace)
-C:124, 0: Wrong hanging indentation (remove 4 spaces).
-        'CLOSE':        ((SELECTED,),                 False),
-    |   ^ (bad-continuation)
-C:124, 0: Exactly one space required after comma
-        'CLOSE':        ((SELECTED,),                 False),
-                                    ^ (bad-whitespace)
-C:125, 0: Wrong hanging indentation (remove 4 spaces).
-        'COMPRESS':     ((AUTH,),                     False),
-    |   ^ (bad-continuation)
-C:125, 0: Exactly one space required after comma
-        'COMPRESS':     ((AUTH,),                     False),
-                                ^ (bad-whitespace)
-C:126, 0: Wrong hanging indentation (remove 4 spaces).
-        'COPY':         ((SELECTED,),                 True),
-    |   ^ (bad-continuation)
-C:126, 0: Exactly one space required after comma
-        'COPY':         ((SELECTED,),                 True),
-                                    ^ (bad-whitespace)
-C:127, 0: Wrong hanging indentation (remove 4 spaces).
-        'CREATE':       ((AUTH, SELECTED),            True),
-    |   ^ (bad-continuation)
-C:127, 0: Exactly one space required after comma
-        'CREATE':       ((AUTH, SELECTED),            True),
-                                         ^ (bad-whitespace)
-C:128, 0: Wrong hanging indentation (remove 4 spaces).
-        'DELETE':       ((AUTH, SELECTED),            True),
-    |   ^ (bad-continuation)
-C:128, 0: Exactly one space required after comma
-        'DELETE':       ((AUTH, SELECTED),            True),
-                                         ^ (bad-whitespace)
-C:129, 0: Wrong hanging indentation (remove 4 spaces).
-        'DELETEACL':    ((AUTH, SELECTED),            True),
-    |   ^ (bad-continuation)
-C:129, 0: Exactly one space required after comma
-        'DELETEACL':    ((AUTH, SELECTED),            True),
-                                         ^ (bad-whitespace)
-C:130, 0: Wrong hanging indentation (remove 4 spaces).
-        'EXAMINE':      ((AUTH, SELECTED),            False),
-    |   ^ (bad-continuation)
-C:130, 0: Exactly one space required after comma
-        'EXAMINE':      ((AUTH, SELECTED),            False),
-                                         ^ (bad-whitespace)
-C:131, 0: Wrong hanging indentation (remove 4 spaces).
-        'EXPUNGE':      ((SELECTED,),                 True),
-    |   ^ (bad-continuation)
-C:131, 0: Exactly one space required after comma
-        'EXPUNGE':      ((SELECTED,),                 True),
-                                    ^ (bad-whitespace)
-C:132, 0: Wrong hanging indentation (remove 4 spaces).
-        'FETCH':        ((SELECTED,),                 True),
-    |   ^ (bad-continuation)
-C:132, 0: Exactly one space required after comma
-        'FETCH':        ((SELECTED,),                 True),
-                                    ^ (bad-whitespace)
-C:133, 0: Wrong hanging indentation (remove 4 spaces).
-        'GETACL':       ((AUTH, SELECTED),            True),
-    |   ^ (bad-continuation)
-C:133, 0: Exactly one space required after comma
-        'GETACL':       ((AUTH, SELECTED),            True),
-                                         ^ (bad-whitespace)
-C:134, 0: Wrong hanging indentation (remove 4 spaces).
-        'GETANNOTATION':((AUTH, SELECTED),            True),
-    |   ^ (bad-continuation)
-C:134, 0: Exactly one space required after comma
-        'GETANNOTATION':((AUTH, SELECTED),            True),
-                                         ^ (bad-whitespace)
-C:135, 0: Wrong hanging indentation (remove 4 spaces).
-        'GETQUOTA':     ((AUTH, SELECTED),            True),
-    |   ^ (bad-continuation)
-C:135, 0: Exactly one space required after comma
-        'GETQUOTA':     ((AUTH, SELECTED),            True),
-                                         ^ (bad-whitespace)
-C:136, 0: Wrong hanging indentation (remove 4 spaces).
-        'GETQUOTAROOT': ((AUTH, SELECTED),            True),
-    |   ^ (bad-continuation)
-C:136, 0: Exactly one space required after comma
-        'GETQUOTAROOT': ((AUTH, SELECTED),            True),
-                                         ^ (bad-whitespace)
-C:137, 0: Wrong hanging indentation (remove 4 spaces).
-        'ID':           ((NONAUTH, AUTH, LOGOUT, SELECTED),   True),
-    |   ^ (bad-continuation)
-C:137, 0: Exactly one space required after comma
-        'ID':           ((NONAUTH, AUTH, LOGOUT, SELECTED),   True),
-                                                          ^ (bad-whitespace)
-C:138, 0: Wrong hanging indentation (remove 4 spaces).
-        'IDLE':         ((SELECTED,),                 False),
-    |   ^ (bad-continuation)
-C:138, 0: Exactly one space required after comma
-        'IDLE':         ((SELECTED,),                 False),
-                                    ^ (bad-whitespace)
-C:139, 0: Wrong hanging indentation (remove 4 spaces).
-        'LIST':         ((AUTH, SELECTED),            True),
-    |   ^ (bad-continuation)
-C:139, 0: Exactly one space required after comma
-        'LIST':         ((AUTH, SELECTED),            True),
-                                         ^ (bad-whitespace)
-C:140, 0: Wrong hanging indentation (remove 4 spaces).
-        'LOGIN':        ((NONAUTH,),                  False),
-    |   ^ (bad-continuation)
-C:140, 0: Exactly one space required after comma
-        'LOGIN':        ((NONAUTH,),                  False),
-                                   ^ (bad-whitespace)
-C:141, 0: Wrong hanging indentation (remove 4 spaces).
-        'LOGOUT':       ((NONAUTH, AUTH, LOGOUT, SELECTED),   False),
-    |   ^ (bad-continuation)
-C:141, 0: Exactly one space required after comma
-        'LOGOUT':       ((NONAUTH, AUTH, LOGOUT, SELECTED),   False),
-                                                          ^ (bad-whitespace)
-C:142, 0: Wrong hanging indentation (remove 4 spaces).
-        'LSUB':         ((AUTH, SELECTED),            True),
-    |   ^ (bad-continuation)
-C:142, 0: Exactly one space required after comma
-        'LSUB':         ((AUTH, SELECTED),            True),
-                                         ^ (bad-whitespace)
-C:143, 0: Wrong hanging indentation (remove 4 spaces).
-        'MYRIGHTS':     ((AUTH, SELECTED),            True),
-    |   ^ (bad-continuation)
-C:143, 0: Exactly one space required after comma
-        'MYRIGHTS':     ((AUTH, SELECTED),            True),
-                                         ^ (bad-whitespace)
-C:144, 0: Wrong hanging indentation (remove 4 spaces).
-        'NAMESPACE':    ((AUTH, SELECTED),            True),
-    |   ^ (bad-continuation)
-C:144, 0: Exactly one space required after comma
-        'NAMESPACE':    ((AUTH, SELECTED),            True),
-                                         ^ (bad-whitespace)
-C:145, 0: Wrong hanging indentation (remove 4 spaces).
-        'NOOP':         ((NONAUTH, AUTH, SELECTED),   True),
-    |   ^ (bad-continuation)
-C:145, 0: Exactly one space required after comma
-        'NOOP':         ((NONAUTH, AUTH, SELECTED),   True),
-                                                  ^ (bad-whitespace)
-C:146, 0: Wrong hanging indentation (remove 4 spaces).
-        'PARTIAL':      ((SELECTED,),                 True),
-    |   ^ (bad-continuation)
-C:146, 0: Exactly one space required after comma
-        'PARTIAL':      ((SELECTED,),                 True),
-                                    ^ (bad-whitespace)
-C:147, 0: Wrong hanging indentation (remove 4 spaces).
-        'PROXYAUTH':    ((AUTH,),                     False),
-    |   ^ (bad-continuation)
-C:147, 0: Exactly one space required after comma
-        'PROXYAUTH':    ((AUTH,),                     False),
-                                ^ (bad-whitespace)
-C:148, 0: Wrong hanging indentation (remove 4 spaces).
-        'RENAME':       ((AUTH, SELECTED),            True),
-    |   ^ (bad-continuation)
-C:148, 0: Exactly one space required after comma
-        'RENAME':       ((AUTH, SELECTED),            True),
-                                         ^ (bad-whitespace)
-C:149, 0: Wrong hanging indentation (remove 4 spaces).
-        'SEARCH':       ((SELECTED,),                 True),
-    |   ^ (bad-continuation)
-C:149, 0: Exactly one space required after comma
-        'SEARCH':       ((SELECTED,),                 True),
-                                    ^ (bad-whitespace)
-C:150, 0: Wrong hanging indentation (remove 4 spaces).
-        'SELECT':       ((AUTH, SELECTED),            False),
-    |   ^ (bad-continuation)
-C:150, 0: Exactly one space required after comma
-        'SELECT':       ((AUTH, SELECTED),            False),
-                                         ^ (bad-whitespace)
-C:151, 0: Wrong hanging indentation (remove 4 spaces).
-        'SETACL':       ((AUTH, SELECTED),            False),
-    |   ^ (bad-continuation)
-C:151, 0: Exactly one space required after comma
-        'SETACL':       ((AUTH, SELECTED),            False),
-                                         ^ (bad-whitespace)
-C:152, 0: Wrong hanging indentation (remove 4 spaces).
-        'SETANNOTATION':((AUTH, SELECTED),            True),
-    |   ^ (bad-continuation)
-C:152, 0: Exactly one space required after comma
-        'SETANNOTATION':((AUTH, SELECTED),            True),
-                                         ^ (bad-whitespace)
-C:153, 0: Wrong hanging indentation (remove 4 spaces).
-        'SETQUOTA':     ((AUTH, SELECTED),            False),
-    |   ^ (bad-continuation)
-C:153, 0: Exactly one space required after comma
-        'SETQUOTA':     ((AUTH, SELECTED),            False),
-                                         ^ (bad-whitespace)
-C:154, 0: Wrong hanging indentation (remove 4 spaces).
-        'SORT':         ((SELECTED,),                 True),
-    |   ^ (bad-continuation)
-C:154, 0: Exactly one space required after comma
-        'SORT':         ((SELECTED,),                 True),
-                                    ^ (bad-whitespace)
-C:155, 0: Wrong hanging indentation (remove 4 spaces).
-        'STARTTLS':     ((NONAUTH,),                  False),
-    |   ^ (bad-continuation)
-C:155, 0: Exactly one space required after comma
-        'STARTTLS':     ((NONAUTH,),                  False),
-                                   ^ (bad-whitespace)
-C:156, 0: Wrong hanging indentation (remove 4 spaces).
-        'STATUS':       ((AUTH, SELECTED),            True),
-    |   ^ (bad-continuation)
-C:156, 0: Exactly one space required after comma
-        'STATUS':       ((AUTH, SELECTED),            True),
-                                         ^ (bad-whitespace)
-C:157, 0: Wrong hanging indentation (remove 4 spaces).
-        'STORE':        ((SELECTED,),                 True),
-    |   ^ (bad-continuation)
-C:157, 0: Exactly one space required after comma
-        'STORE':        ((SELECTED,),                 True),
-                                    ^ (bad-whitespace)
-C:158, 0: Wrong hanging indentation (remove 4 spaces).
-        'SUBSCRIBE':    ((AUTH, SELECTED),            False),
-    |   ^ (bad-continuation)
-C:158, 0: Exactly one space required after comma
-        'SUBSCRIBE':    ((AUTH, SELECTED),            False),
-                                         ^ (bad-whitespace)
-C:159, 0: Wrong hanging indentation (remove 4 spaces).
-        'THREAD':       ((SELECTED,),                 True),
-    |   ^ (bad-continuation)
-C:159, 0: Exactly one space required after comma
-        'THREAD':       ((SELECTED,),                 True),
-                                    ^ (bad-whitespace)
-C:160, 0: Wrong hanging indentation (remove 4 spaces).
-        'UID':          ((SELECTED,),                 True),
-    |   ^ (bad-continuation)
-C:160, 0: Exactly one space required after comma
-        'UID':          ((SELECTED,),                 True),
-                                    ^ (bad-whitespace)
-C:161, 0: Wrong hanging indentation (remove 4 spaces).
-        'UNSUBSCRIBE':  ((AUTH, SELECTED),            False),
-    |   ^ (bad-continuation)
-C:161, 0: Exactly one space required after comma
-        'UNSUBSCRIBE':  ((AUTH, SELECTED),            False),
-                                         ^ (bad-whitespace)
-C:162, 0: Wrong hanging indentation.
-        }
-|   |   ^ (bad-continuation)
-C:319, 0: Line too long (86/80) (line-too-long)
-C:359, 0: Wrong continued indentation (add 8 spaces).
-                        + self.tagpre
-                        ^       | (bad-continuation)
-C:360, 0: Wrong continued indentation (add 8 spaces).
-                        + r'\d+) (?P<type>[A-Z]+) (?P<data>.*)')
-                        ^       | (bad-continuation)
-C:627, 0: Exactly one space required after comma
-            if (flags[0],flags[-1]) != ('(',')'):
-                        ^ (bad-whitespace)
-C:627, 0: Exactly one space required after comma
-            if (flags[0],flags[-1]) != ('(',')'):
-                                           ^ (bad-whitespace)
-C:858, 0: Line too long (85/80) (line-too-long)
-C:858, 0: Line too long (85/80) (line-too-long)
-C:919, 0: Line too long (81/80) (line-too-long)
-C:926, 0: Line too long (89/80) (line-too-long)
-C:932, 0: Line too long (81/80) (line-too-long)
-C:932, 0: Line too long (81/80) (line-too-long)
-C:955, 0: Line too long (82/80) (line-too-long)
-C:987, 0: Line too long (122/80) (line-too-long)
-C:994, 0: Line too long (81/80) (line-too-long)
-C:1035, 0: Exactly one space required after comma
+W:229, 0: Anomalous backslash in string: '\D'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
+W:2240, 0: Anomalous backslash in string: '\D'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
+W:2354, 0: Anomalous backslash in string: '\D'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
+W:2368, 0: Anomalous backslash in string: '\S'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
+W:2371, 0: Anomalous backslash in string: '\D'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
+C:1020, 0: Exactly one space required after comma
         if (sort_criteria[0],sort_criteria[-1]) != ('(',')'):
                             ^ (bad-whitespace)
-C:1035, 0: Exactly one space required after comma
+C:1020, 0: Exactly one space required after comma
         if (sort_criteria[0],sort_criteria[-1]) != ('(',')'):
                                                        ^ (bad-whitespace)
-C:1038, 0: Line too long (89/80) (line-too-long)
-C:1041, 0: Line too long (115/80) (line-too-long)
-C:1042, 0: Line too long (121/80) (line-too-long)
-C:1053, 0: Line too long (97/80) (line-too-long)
-C:1111, 0: Exactly one space required after comma
+C:1085, 0: Exactly one space required after comma
         if (flags[0],flags[-1]) != ('(',')'):
                     ^ (bad-whitespace)
-C:1111, 0: Exactly one space required after comma
+C:1085, 0: Exactly one space required after comma
         if (flags[0],flags[-1]) != ('(',')'):
                                        ^ (bad-whitespace)
-C:1128, 0: Line too long (86/80) (line-too-long)
-C:1133, 0: Line too long (95/80) (line-too-long)
-C:1164, 0: Line too long (82/80) (line-too-long)
-W:1193, 0: Bad indentation. Found 17 spaces, expected 16 (bad-indentation)
-C:1205, 0: Line too long (98/80) (line-too-long)
-C:1222, 0: Exactly one space required after comma
+W:1154, 0: Bad indentation. Found 17 spaces, expected 16 (bad-indentation)
+C:1179, 0: Exactly one space required after comma
         if len(arg) >= 2 and (arg[0],arg[-1]) in (('(',')'),('"','"')):
                                     ^ (bad-whitespace)
-C:1222, 0: Exactly one space required after comma
+C:1179, 0: Exactly one space required after comma
         if len(arg) >= 2 and (arg[0],arg[-1]) in (('(',')'),('"','"')):
                                                       ^ (bad-whitespace)
-C:1222, 0: Exactly one space required after comma
+C:1179, 0: Exactly one space required after comma
         if len(arg) >= 2 and (arg[0],arg[-1]) in (('(',')'),('"','"')):
                                                            ^ (bad-whitespace)
-C:1222, 0: Exactly one space required after comma
+C:1179, 0: Exactly one space required after comma
         if len(arg) >= 2 and (arg[0],arg[-1]) in (('(',')'),('"','"')):
                                                                 ^ (bad-whitespace)
-C:1224, 0: Exactly one space required after comma
+C:1181, 0: Exactly one space required after comma
         if len(arg) >= 2 and (arg[0],arg[-1]) in (("'","'"),):
                                     ^ (bad-whitespace)
-C:1224, 0: Exactly one space required after comma
+C:1181, 0: Exactly one space required after comma
         if len(arg) >= 2 and (arg[0],arg[-1]) in (("'","'"),):
                                                       ^ (bad-whitespace)
-W:1238, 0: Bad indentation. Found 17 spaces, expected 16 (bad-indentation)
-W:1239, 0: Bad indentation. Found 21 spaces, expected 20 (bad-indentation)
-C:1240, 0: Line too long (97/80) (line-too-long)
-W:1240, 0: Bad indentation. Found 17 spaces, expected 16 (bad-indentation)
-C:1272, 0: Line too long (97/80) (line-too-long)
-C:1279, 0: Wrong continued indentation (remove 3 spaces).
-                                % (name, self.state))
-                             |  ^ (bad-continuation)
-C:1286, 0: Line too long (89/80) (line-too-long)
-C:1317, 0: Trailing whitespace (trailing-whitespace)
-C:1363, 0: Line too long (102/80) (line-too-long)
-C:1387, 0: Line too long (107/80) (line-too-long)
-C:1390, 0: Line too long (81/80) (line-too-long)
-C:1432, 0: Line too long (92/80) (line-too-long)
-C:1480, 0: Line too long (98/80) (line-too-long)
-C:1493, 0: Line too long (87/80) (line-too-long)
-C:1510, 0: Line too long (103/80) (line-too-long)
-C:1512, 0: Line too long (88/80) (line-too-long)
-C:1515, 0: Line too long (82/80) (line-too-long)
-C:1528, 0: Line too long (97/80) (line-too-long)
-C:1539, 0: Line too long (83/80) (line-too-long)
-C:1575, 0: Line too long (87/80) (line-too-long)
-C:1587, 0: Line too long (97/80) (line-too-long)
-C:1595, 0: Line too long (97/80) (line-too-long)
-C:1612, 0: Line too long (93/80) (line-too-long)
-C:1655, 0: Line too long (81/80) (line-too-long)
-C:1663, 0: Line too long (89/80) (line-too-long)
-C:1682, 0: Line too long (84/80) (line-too-long)
-W:1709, 0: Bad indentation. Found 6 spaces, expected 8 (bad-indentation)
-W:1711, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
-W:1713, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
-W:1715, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
-W:1716, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
-C:1721, 0: Line too long (86/80) (line-too-long)
-W:1721, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
-C:1721, 0: Unnecessary parens after 'if' keyword (superfluous-parens)
-W:1723, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
-W:1725, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
-W:1727, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
-W:1729, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
-W:1730, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
-C:1731, 0: Line too long (96/80) (line-too-long)
-W:1731, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
-W:1733, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
-W:1734, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
-W:1735, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1736, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
-W:1737, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1738, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
-W:1739, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1740, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1741, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1742, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-W:1744, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-C:1744, 0: Exactly one space required after comma
+W:1194, 0: Bad indentation. Found 17 spaces, expected 16 (bad-indentation)
+W:1195, 0: Bad indentation. Found 21 spaces, expected 20 (bad-indentation)
+W:1196, 0: Bad indentation. Found 17 spaces, expected 16 (bad-indentation)
+W:1197, 0: Bad indentation. Found 21 spaces, expected 20 (bad-indentation)
+C:1270, 0: Trailing whitespace (trailing-whitespace)
+C:1594, 0: Line too long (89/80) (line-too-long)
+C:1611, 0: Line too long (84/80) (line-too-long)
+W:1637, 0: Bad indentation. Found 6 spaces, expected 8 (bad-indentation)
+W:1638, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
+W:1639, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
+W:1640, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
+W:1642, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
+W:1643, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
+C:1648, 0: Line too long (86/80) (line-too-long)
+W:1648, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
+C:1648, 0: Unnecessary parens after 'if' keyword (superfluous-parens)
+W:1650, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
+W:1651, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
+W:1652, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
+W:1653, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
+W:1654, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
+C:1655, 0: Line too long (96/80) (line-too-long)
+W:1655, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
+W:1656, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
+W:1657, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
+W:1658, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1659, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
+W:1660, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1661, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
+W:1662, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1663, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1664, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1665, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1666, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1667, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+C:1667, 0: Exactly one space required after comma
                 fd,state = r[0]
                   ^ (bad-whitespace)
-W:1746, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-C:1747, 0: Line too long (93/80) (line-too-long)
-W:1747, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-W:1748, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-W:1749, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-W:1750, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-W:1751, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-W:1752, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
-W:1753, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
-W:1754, 0: Bad indentation. Found 28 spaces, expected 32 (bad-indentation)
-W:1755, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
-W:1756, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
-W:1757, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-W:1759, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-W:1760, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
-W:1761, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
-W:1762, 0: Bad indentation. Found 28 spaces, expected 32 (bad-indentation)
-W:1763, 0: Bad indentation. Found 28 spaces, expected 32 (bad-indentation)
-W:1764, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
-W:1765, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
-W:1767, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
-W:1768, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
-W:1769, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
-W:1770, 0: Bad indentation. Found 28 spaces, expected 32 (bad-indentation)
-W:1772, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1773, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-W:1774, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
-W:1775, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1776, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1777, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-W:1778, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
-W:1779, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
-W:1780, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
-W:1781, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1782, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1784, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
-W:1786, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
-W:1792, 0: Bad indentation. Found 6 spaces, expected 8 (bad-indentation)
-W:1794, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
-W:1796, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
-W:1798, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
-W:1800, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
-W:1801, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
-W:1803, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
-W:1804, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
-W:1805, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1806, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
-W:1807, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1808, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
-W:1809, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-C:1809, 0: Exactly one space required after comma
+W:1668, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+C:1669, 0: Line too long (83/80) (line-too-long)
+W:1669, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1670, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1671, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1672, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1673, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1674, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1675, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1676, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1677, 0: Bad indentation. Found 28 spaces, expected 32 (bad-indentation)
+W:1678, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1679, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1680, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1682, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1683, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1684, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1685, 0: Bad indentation. Found 28 spaces, expected 32 (bad-indentation)
+W:1686, 0: Bad indentation. Found 28 spaces, expected 32 (bad-indentation)
+W:1687, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1688, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1690, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1691, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1692, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1693, 0: Bad indentation. Found 28 spaces, expected 32 (bad-indentation)
+W:1695, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1696, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1697, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
+W:1698, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1699, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1700, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1701, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1702, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1703, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1704, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1705, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1707, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
+W:1709, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
+W:1710, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
+W:1715, 0: Bad indentation. Found 6 spaces, expected 8 (bad-indentation)
+W:1716, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
+W:1717, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
+W:1718, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
+W:1719, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
+W:1720, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
+W:1721, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
+W:1722, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
+W:1723, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
+W:1724, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1725, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
+W:1726, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1727, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
+W:1728, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+C:1728, 0: Exactly one space required after comma
                 r,w,e = select.select([self.read_fd], [], [], timeout)
                  ^ (bad-whitespace)
-C:1809, 0: Exactly one space required after comma
+C:1728, 0: Exactly one space required after comma
                 r,w,e = select.select([self.read_fd], [], [], timeout)
                    ^ (bad-whitespace)
-W:1810, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-C:1810, 0: Exactly one space required after comma
+W:1729, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+C:1729, 0: Exactly one space required after comma
                 if __debug__: self._log(5, 'select => %s, %s, %s' % (r,w,e))
                                                                       ^ (bad-whitespace)
-C:1810, 0: Exactly one space required after comma
+C:1729, 0: Exactly one space required after comma
                 if __debug__: self._log(5, 'select => %s, %s, %s' % (r,w,e))
                                                                         ^ (bad-whitespace)
-W:1811, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1812, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-C:1814, 0: Line too long (93/80) (line-too-long)
-W:1814, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1815, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1816, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1817, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1818, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1819, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-W:1820, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-W:1821, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
-W:1822, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-W:1823, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-W:1824, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1826, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1827, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-W:1828, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-W:1829, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
-W:1830, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
-W:1831, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-W:1832, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-W:1834, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-W:1835, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-W:1836, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-W:1837, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
-W:1838, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
-W:1839, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1840, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1841, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
-W:1842, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
-W:1843, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
-W:1844, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
-W:1845, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1846, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
-W:1848, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
-C:1892, 0: Line too long (81/80) (line-too-long)
-C:1893, 0: Line too long (95/80) (line-too-long)
-C:1900, 0: Line too long (105/80) (line-too-long)
-C:1912, 0: Line too long (88/80) (line-too-long)
-C:1912, 0: Exactly one space required after :
-            l = map(lambda x:'%s: "%s"' % (x[0], x[1][0] and '" "'.join(x[1]) or ''), l)
-                            ^ (bad-whitespace)
-C:1950, 0: Line too long (88/80) (line-too-long)
-C:1978, 0: Line too long (185/80) (line-too-long)
-C:1982, 0: Line too long (91/80) (line-too-long)
-C:1984, 0: Line too long (115/80) (line-too-long)
-C:1985, 0: Line too long (96/80) (line-too-long)
-C:1986, 0: Line too long (106/80) (line-too-long)
-C:1997, 0: Line too long (211/80) (line-too-long)
-C:2003, 0: Line too long (95/80) (line-too-long)
-C:2067, 0: Line too long (109/80) (line-too-long)
-C:2080, 0: Line too long (112/80) (line-too-long)
-C:2087, 0: Line too long (95/80) (line-too-long)
-C:2098, 0: Line too long (85/80) (line-too-long)
-C:2099, 0: Line too long (90/80) (line-too-long)
-C:2195, 0: Line too long (101/80) (line-too-long)
-C:2201, 0: Wrong continued indentation (remove 2 spaces).
-                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-              | ^ (bad-continuation)
-C:2206, 0: Wrong continued indentation (add 22 spaces).
+W:1730, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1731, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1732, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1733, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1734, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1735, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1736, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1737, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1738, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1739, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1740, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1741, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1742, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1743, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1745, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1746, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1747, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1748, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1749, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1750, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1751, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1753, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1754, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1755, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1756, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1757, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1758, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
+W:1759, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1760, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1761, 0: Bad indentation. Found 20 spaces, expected 24 (bad-indentation)
+W:1762, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1763, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1764, 0: Bad indentation. Found 24 spaces, expected 28 (bad-indentation)
+W:1765, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1766, 0: Bad indentation. Found 16 spaces, expected 20 (bad-indentation)
+W:1767, 0: Bad indentation. Found 8 spaces, expected 12 (bad-indentation)
+W:1768, 0: Bad indentation. Found 12 spaces, expected 16 (bad-indentation)
+C:1826, 0: Wrong hanging indentation (remove 4 spaces).
+                    '%s: "%s"' %
+                |   ^ (bad-continuation)
+C:1827, 0: Wrong hanging indentation (remove 4 spaces).
+                    (x[0], x[1][0] and '" "'.join(x[1]) or ''), l
+                |   ^ (bad-continuation)
+C:2117, 0: Wrong continued indentation (add 22 spaces).
     r'(?P<day>[ 0123][0-9])-(?P<mon>[A-Z][a-z][a-z])-(?P<year>[0-9][0-9][0-9][0-9])'
     ^                     | (bad-continuation)
-C:2206, 0: Line too long (84/80) (line-too-long)
-C:2266, 0: Line too long (82/80) (line-too-long)
-C:2266, 0: Exactly one space required after comma
+C:2117, 0: Line too long (84/80) (line-too-long)
+C:2166, 0: Line too long (82/80) (line-too-long)
+C:2166, 0: Exactly one space required after comma
     elif isinstance(date_time, str) and (date_time[0],date_time[-1]) == ('"','"'):
                                                      ^ (bad-whitespace)
-C:2266, 0: Exactly one space required after comma
+C:2166, 0: Exactly one space required after comma
     elif isinstance(date_time, str) and (date_time[0],date_time[-1]) == ('"','"'):
                                                                             ^ (bad-whitespace)
-C:2300, 0: Line too long (84/80) (line-too-long)
-C:2310, 0: Line too long (88/80) (line-too-long)
-C:2311, 0: Exactly one space required after comma
-    for opt,val in optlist:
-           ^ (bad-whitespace)
-C:2319, 0: Exactly one space required after comma
+C:2194, 0: Line too long (84/80) (line-too-long)
+C:2202, 0: Line too long (88/80) (line-too-long)
+C:2211, 0: Exactly one space required after comma
                 keyfile,certfile = val.split(':')
                        ^ (bad-whitespace)
-C:2321, 0: Exactly one space required after comma
+C:2213, 0: Exactly one space required after comma
                 keyfile,certfile = val,val
                        ^ (bad-whitespace)
-C:2321, 0: Exactly one space required after comma
+C:2213, 0: Exactly one space required after comma
                 keyfile,certfile = val,val
                                       ^ (bad-whitespace)
-C:2335, 0: Line too long (83/80) (line-too-long)
-C:2336, 0: Line too long (89/80) (line-too-long)
-C:2340, 0: Wrong hanging indentation (add 4 spaces).
+C:2227, 0: Line too long (89/80) (line-too-long)
+C:2231, 0: Wrong hanging indentation (add 4 spaces).
     ('list', ('""', '%')),
     ^   | (bad-continuation)
-C:2341, 0: Wrong hanging indentation (add 4 spaces).
+C:2232, 0: Wrong hanging indentation (add 4 spaces).
     ('create', ('/tmp/imaplib2_test.0',)),
     ^   | (bad-continuation)
-C:2342, 0: Wrong hanging indentation (add 4 spaces).
+C:2233, 0: Wrong hanging indentation (add 4 spaces).
     ('rename', ('/tmp/imaplib2_test.0', '/tmp/imaplib2_test.1')),
     ^   | (bad-continuation)
-C:2343, 0: Wrong hanging indentation (add 4 spaces).
+C:2234, 0: Wrong hanging indentation (add 4 spaces).
     ('CREATE', ('/tmp/imaplib2_test.2',)),
     ^   | (bad-continuation)
-C:2344, 0: Wrong hanging indentation (add 4 spaces).
+C:2235, 0: Wrong hanging indentation (add 4 spaces).
     ('append', ('/tmp/imaplib2_test.2', None, None, test_mesg)),
     ^   | (bad-continuation)
-C:2345, 0: Wrong hanging indentation (add 4 spaces).
+C:2236, 0: Wrong hanging indentation (add 4 spaces).
     ('list', ('/tmp', 'imaplib2_test*')),
     ^   | (bad-continuation)
-C:2346, 0: Wrong hanging indentation (add 4 spaces).
+C:2237, 0: Wrong hanging indentation (add 4 spaces).
     ('select', ('/tmp/imaplib2_test.2',)),
     ^   | (bad-continuation)
-C:2347, 0: Wrong hanging indentation (add 4 spaces).
+C:2238, 0: Wrong hanging indentation (add 4 spaces).
     ('search', (None, 'SUBJECT', 'IMAP4 test')),
     ^   | (bad-continuation)
-C:2348, 0: Wrong hanging indentation (add 4 spaces).
+C:2239, 0: Wrong hanging indentation (add 4 spaces).
     ('fetch', ("'1:*'", '(FLAGS INTERNALDATE RFC822)')),
     ^   | (bad-continuation)
-C:2349, 0: Wrong hanging indentation (add 4 spaces).
+C:2240, 0: Wrong hanging indentation (add 4 spaces).
     ('store', ('1', 'FLAGS', '(\Deleted)')),
     ^   | (bad-continuation)
-C:2350, 0: Wrong hanging indentation (add 4 spaces).
+C:2241, 0: Wrong hanging indentation (add 4 spaces).
     ('namespace', ()),
     ^   | (bad-continuation)
-C:2351, 0: Wrong hanging indentation (add 4 spaces).
+C:2242, 0: Wrong hanging indentation (add 4 spaces).
     ('expunge', ()),
     ^   | (bad-continuation)
-C:2352, 0: Wrong hanging indentation (add 4 spaces).
+C:2243, 0: Wrong hanging indentation (add 4 spaces).
     ('recent', ()),
     ^   | (bad-continuation)
-C:2353, 0: Wrong hanging indentation (add 4 spaces).
+C:2244, 0: Wrong hanging indentation (add 4 spaces).
     ('close', ()),
     ^   | (bad-continuation)
-C:2357, 0: Wrong hanging indentation (add 4 spaces).
+C:2248, 0: Wrong hanging indentation (add 4 spaces).
     ('select', ()),
     ^   | (bad-continuation)
-C:2358, 0: Wrong hanging indentation (add 4 spaces).
+C:2249, 0: Wrong hanging indentation (add 4 spaces).
     ('response', ('UIDVALIDITY',)),
     ^   | (bad-continuation)
-C:2359, 0: Wrong hanging indentation (add 4 spaces).
+C:2250, 0: Wrong hanging indentation (add 4 spaces).
     ('response', ('EXISTS',)),
     ^   | (bad-continuation)
-C:2360, 0: Wrong hanging indentation (add 4 spaces).
+C:2251, 0: Wrong hanging indentation (add 4 spaces).
     ('append', (None, None, None, test_mesg)),
     ^   | (bad-continuation)
-C:2361, 0: Wrong hanging indentation (add 4 spaces).
+C:2252, 0: Wrong hanging indentation (add 4 spaces).
     ('uid', ('SEARCH', 'SUBJECT', 'IMAP4 test')),
     ^   | (bad-continuation)
-C:2362, 0: Wrong hanging indentation (add 4 spaces).
+C:2253, 0: Wrong hanging indentation (add 4 spaces).
     ('uid', ('SEARCH', 'ALL')),
     ^   | (bad-continuation)
-C:2363, 0: Wrong hanging indentation (add 4 spaces).
+C:2254, 0: Wrong hanging indentation (add 4 spaces).
     ('uid', ('THREAD', 'references', 'UTF-8', '(SEEN)')),
     ^   | (bad-continuation)
-C:2364, 0: Wrong hanging indentation (add 4 spaces).
+C:2255, 0: Wrong hanging indentation (add 4 spaces).
     ('recent', ()),
     ^   | (bad-continuation)
-C:2391, 0: Line too long (89/80) (line-too-long)
-C:2412, 0: Line too long (152/80) (line-too-long)
-C:2414, 0: Line too long (113/80) (line-too-long)
-C:2416, 0: Line too long (112/80) (line-too-long)
-C:2418, 0: Line too long (98/80) (line-too-long)
-C:2424, 0: Exactly one space required after comma
+C:2281, 0: Line too long (89/80) (line-too-long)
+C:2326, 0: Exactly one space required after comma
         for cmd,args in test_seq1:
                ^ (bad-whitespace)
-C:2437, 0: Trailing whitespace (trailing-whitespace)
-C:2438, 0: Exactly one space required after comma
+C:2339, 0: Trailing whitespace (trailing-whitespace)
+C:2340, 0: Exactly one space required after comma
         for cmd,args in test_seq2:
                ^ (bad-whitespace)
-C:2439, 0: Exactly one space required after comma
+C:2341, 0: Exactly one space required after comma
             if (cmd,args) != ('uid', ('SEARCH', 'SUBJECT', 'IMAP4 test')):
                    ^ (bad-whitespace)
-C:2447, 0: Wrong continued indentation (add 4 spaces).
-                    '(FLAGS INTERNALDATE RFC822.SIZE RFC822.HEADER RFC822.TEXT)'))
-                    ^   | (bad-continuation)
-C:2447, 0: Line too long (82/80) (line-too-long)
-C:2453, 0: Line too long (96/80) (line-too-long)
-C:2470, 0: Line too long (102/80) (line-too-long)
-C:2485, 0: Line too long (86/80) (line-too-long)
-C:2485, 0: Exactly one space required after comma
-            for typ,dat in M.pop_untagged_responses(): M._mesg('\t%s %s' % (typ, dat))
+C:2359, 0: Line too long (88/80) (line-too-long)
+C:2376, 0: Line too long (102/80) (line-too-long)
+C:2391, 0: Exactly one space required after comma
+            for typ,dat in M.pop_untagged_responses():
                    ^ (bad-whitespace)
-W:229, 0: Anomalous backslash in string: '\D'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
-W:2349, 0: Anomalous backslash in string: '\D'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
-W:2448, 0: Anomalous backslash in string: '\D'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
-W:2462, 0: Anomalous backslash in string: '\S'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
-W:2465, 0: Anomalous backslash in string: '\D'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
 W: 35, 4: Redefining built-in 'bytes' (redefined-builtin)
 W: 33, 4: Redefining built-in 'str' (redefined-builtin)
 C: 30, 4: Invalid constant name "unicode" (invalid-name)
@@ -636,409 +303,356 @@ C: 97, 0: Invalid constant name "Debug" (invalid-name)
 C:110, 0: Invalid constant name "AllowedVersions" (invalid-name)
 C:118, 0: Invalid constant name "Commands" (invalid-name)
 C:164, 0: Invalid constant name "UID_direct" (invalid-name)
-W:171, 4: Redefining name 'val' from outer scope (line 2311) (redefined-outer-name)
-W:167,11: Redefining name 'num' from outer scope (line 2458) (redefined-outer-name)
 C:167, 0: Invalid function name "Int2AP" (invalid-name)
+W:171, 4: Redefining name 'val' from outer scope (line 2203) (redefined-outer-name)
+W:167,11: Redefining name 'num' from outer scope (line 2364) (redefined-outer-name)
 R:179, 0: Too many instance attributes (9/7) (too-many-instance-attributes)
-W:200,25: Redefining name 'val' from outer scope (line 2311) (redefined-outer-name)
-W:200,20: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
 C:200, 4: Missing method docstring (missing-docstring)
-W:210,17: Redefining name 'val' from outer scope (line 2311) (redefined-outer-name)
-W:210,12: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
+W:200,25: Redefining name 'val' from outer scope (line 2203) (redefined-outer-name)
+W:200,20: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
 C:204, 4: Missing method docstring (missing-docstring)
+W:210,17: Redefining name 'val' from outer scope (line 2203) (redefined-outer-name)
+W:210,12: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
 W:207,24: Access to a protected member _log of a client class (protected-access)
 C:217, 4: Missing method docstring (missing-docstring)
 W:225,24: Access to a protected member _log of a client class (protected-access)
-C:434,21: Invalid attribute name "PROTOCOL_VERSION" (invalid-name)
-C:388,13: Invalid attribute name "Terminate" (invalid-name)
-C:388,30: Invalid attribute name "TerminateReader" (invalid-name)
-C:1444,13: Invalid attribute name "mo" (invalid-name)
+C:381,30: Invalid attribute name "TerminateReader" (invalid-name)
+C:381,13: Invalid attribute name "Terminate" (invalid-name)
+C:426,21: Invalid attribute name "PROTOCOL_VERSION" (invalid-name)
+C:1383,13: Invalid attribute name "mo" (invalid-name)
 R:228, 0: Too many instance attributes (56/7) (too-many-instance-attributes)
-C:310, 4: Invalid class name "error" (invalid-name)
-C:310, 4: Missing class docstring (missing-docstring)
-C:310,28: More than one statement on a single line (multiple-statements)
+C:309, 4: Invalid class name "error" (invalid-name)
+C:309, 4: Missing class docstring (missing-docstring)
 C:311, 4: Invalid class name "abort" (invalid-name)
 C:311, 4: Missing class docstring (missing-docstring)
-C:311,24: More than one statement on a single line (multiple-statements)
-C:312, 4: Invalid class name "readonly" (invalid-name)
-C:312, 4: Missing class docstring (missing-docstring)
-C:312,27: More than one statement on a single line (multiple-statements)
-W:332,18: Redefining name 'host' from outer scope (line 2331) (redefined-outer-name)
-W:332,29: Redefining name 'port' from outer scope (line 2310) (redefined-outer-name)
-W:425,17: Redefining name 'dat' from outer scope (line 2443) (redefined-outer-name)
-W:333,43: Redefining name 'debug_buf_lvl' from outer scope (line 2310) (redefined-outer-name)
-W:332,40: Redefining name 'debug' from outer scope (line 2310) (redefined-outer-name)
-W:425,12: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
-C:362,22: More than one statement on a single line (multiple-statements)
-C:417,30: More than one statement on a single line (multiple-statements)
-C:419,30: More than one statement on a single line (multiple-statements)
-C:429,26: More than one statement on a single line (multiple-statements)
-C:432,19: Consider changing "not version in self.capabilities" to "version not in self.capabilities" (unneeded-not)
-W:425,12: Unused variable 'typ' (unused-variable)
-R:331, 4: Too many branches (19/12) (too-many-branches)
-R:331, 4: Too many statements (78/50) (too-many-statements)
-W:454,19: Redefining name 'host' from outer scope (line 2331) (redefined-outer-name)
-W:454,30: Redefining name 'port' from outer scope (line 2310) (redefined-outer-name)
-C:474,12: Invalid variable name "af" (invalid-name)
-C:474,44: Invalid variable name "sa" (invalid-name)
-C:476,16: Invalid variable name "s" (invalid-name)
-W:480,20: Unused variable 'i' (unused-variable)
-W:474,33: Unused variable 'canonname' (unused-variable)
-C:497, 4: Missing method docstring (missing-docstring)
-E:516,29: Module 'socket' has no 'sslerror' member (no-member)
-E:528,25: Module 'socket' has no 'sslerror' member (no-member)
-W:549,12: Redefining name 'data' from outer scope (line 2335) (redefined-outer-name)
-W:554,19: Redefining name 'data' from outer scope (line 2335) (redefined-outer-name)
-W:579,17: Redefining name 'dat' from outer scope (line 2443) (redefined-outer-name)
-W:579,12: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
-C:582,30: More than one statement on a single line (multiple-statements)
-W:579,17: Unused variable 'dat' (unused-variable)
-W:605,13: Redefining name 'dat' from outer scope (line 2443) (redefined-outer-name)
-W:605, 8: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
-W:616,13: Redefining name 'dat' from outer scope (line 2443) (redefined-outer-name)
-W:616, 8: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
-W:659,17: Redefining name 'dat' from outer scope (line 2443) (redefined-outer-name)
-W:659,12: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
-C:663,26: More than one statement on a single line (multiple-statements)
-W:689,17: Redefining name 'dat' from outer scope (line 2443) (redefined-outer-name)
-W:689,12: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
-C:692,26: More than one statement on a single line (multiple-statements)
-W:774,13: Redefining name 'dat' from outer scope (line 2443) (redefined-outer-name)
-W:774, 8: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
-W:792,12: Redefining name 'data' from outer scope (line 2335) (redefined-outer-name)
-C:780, 4: Invalid method name "id" (invalid-name)
-W:832,17: Redefining name 'dat' from outer scope (line 2443) (redefined-outer-name)
-W:832,12: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
-C:837,26: More than one statement on a single line (multiple-statements)
-C:848, 4: Invalid method name "_CRAM_MD5_AUTH" (invalid-name)
-W:865,21: Redefining name 'dat' from outer scope (line 2443) (redefined-outer-name)
-W:865,16: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
-C:861,22: More than one statement on a single line (multiple-statements)
-W:866,12: No exception type(s) specified (bare-except)
-C:868,30: More than one statement on a single line (multiple-statements)
-C:874,22: More than one statement on a single line (multiple-statements)
-C:914,22: More than one statement on a single line (multiple-statements)
-W:981,17: Redefining name 'dat' from outer scope (line 2443) (redefined-outer-name)
-W:981,12: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
-C:985,30: More than one statement on a single line (multiple-statements)
-C:990,26: More than one statement on a single line (multiple-statements)
-C:995,26: More than one statement on a single line (multiple-statements)
-W:1011, 0: Redefining name 'args' from outer scope (line 2306) (redefined-outer-name)
-W:1041,23: Redefining name 'keyfile' from outer scope (line 2310) (redefined-outer-name)
-W:1059,17: Redefining name 'dat' from outer scope (line 2443) (redefined-outer-name)
-W:1041,37: Redefining name 'certfile' from outer scope (line 2310) (redefined-outer-name)
-W:1059,12: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
-W:1136, 0: Redefining name 'args' from outer scope (line 2306) (redefined-outer-name)
-W:1162, 0: Redefining name 'args' from outer scope (line 2306) (redefined-outer-name)
-C:1169,11: Consider changing "not name in Commands" to "name not in Commands" (unneeded-not)
-W:1181,36: Redefining name 'dat' from outer scope (line 2443) (redefined-outer-name)
-W:1181,31: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
-C:1181, 4: Missing method docstring (missing-docstring)
-C:1186,24: More than one statement on a single line (multiple-statements)
-C:1205,22: More than one statement on a single line (multiple-statements)
-C:1208, 4: Missing method docstring (missing-docstring)
-C:1215, 4: Missing method docstring (missing-docstring)
-W:1231, 0: Redefining name 'args' from outer scope (line 2306) (redefined-outer-name)
-C:1231, 4: Missing method docstring (missing-docstring)
-C:1240,31: More than one statement on a single line (multiple-statements)
-R:1235,12: Redefinition of dflttyp type from tuple to type (redefined-variable-type)
-W:1295, 8: Redefining name 'data' from outer scope (line 2335) (redefined-outer-name)
-W:1244, 0: Redefining name 'args' from outer scope (line 2306) (redefined-outer-name)
-W:1283,12: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
-C:1244, 4: Missing method docstring (missing-docstring)
-C:1251,22: More than one statement on a single line (multiple-statements)
-C:1253,22: More than one statement on a single line (multiple-statements)
-C:1260,26: More than one statement on a single line (multiple-statements)
-C:1272,30: More than one statement on a single line (multiple-statements)
-C:1274,30: More than one statement on a single line (multiple-statements)
-C:1297,28: More than one statement on a single line (multiple-statements)
-C:1309,22: More than one statement on a single line (multiple-statements)
-C:1325,12: Invalid variable name "ok" (invalid-name)
-C:1326,26: More than one statement on a single line (multiple-statements)
-C:1345,26: More than one statement on a single line (multiple-statements)
-R:1336,16: Redefinition of literal type from instancemethod to str (redefined-variable-type)
-R:1244, 4: Too many branches (31/12) (too-many-branches)
-R:1244, 4: Too many statements (77/50) (too-many-statements)
-W:1360,13: Redefining name 'dat' from outer scope (line 2443) (redefined-outer-name)
-W:1360, 8: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
-C:1355, 4: Invalid argument name "kw" (invalid-name)
-C:1355, 4: Missing method docstring (missing-docstring)
-C:1362,26: More than one statement on a single line (multiple-statements)
-W:1377,17: Redefining name 'val' from outer scope (line 2311) (redefined-outer-name)
-W:1384,13: Redefining name 'dat' from outer scope (line 2443) (redefined-outer-name)
-W:1377,12: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
-C:1369, 4: Missing method docstring (missing-docstring)
-C:1372,13: Invalid variable name "kw" (invalid-name)
-C:1376,26: More than one statement on a single line (multiple-statements)
-C:1386,26: More than one statement on a single line (multiple-statements)
-W:1394,32: Redefining name 'dat' from outer scope (line 2443) (redefined-outer-name)
-W:1394,27: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
-C:1394, 4: Invalid argument name "kw" (invalid-name)
-C:1394, 4: Missing method docstring (missing-docstring)
-R:1394, 4: Method could be a function (no-self-use)
-W:1401,32: Redefining name 'dat' from outer scope (line 2443) (redefined-outer-name)
-C:1401, 4: Invalid argument name "kw" (invalid-name)
-C:1401, 4: Missing method docstring (missing-docstring)
-R:1401, 4: Method could be a function (no-self-use)
-C:1408, 4: Missing method docstring (missing-docstring)
-C:1420,22: More than one statement on a single line (multiple-statements)
-W:1427,21: Redefining name 'dat' from outer scope (line 2443) (redefined-outer-name)
-W:1427,16: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
-C:1423, 4: Missing method docstring (missing-docstring)
-C:1432,30: More than one statement on a single line (multiple-statements)
-C:1439, 4: Invalid argument name "s" (invalid-name)
-C:1439, 4: Missing method docstring (missing-docstring)
-W:1462,17: Redefining name 'dat' from outer scope (line 2443) (redefined-outer-name)
-W:1462,12: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
-C:1448, 4: Missing method docstring (missing-docstring)
-R:1469, 8: The if statement can be reduced by assigning bool of test (simplifiable-if-statement)
-C:1480,30: More than one statement on a single line (multiple-statements)
-C:1485,26: More than one statement on a single line (multiple-statements)
-C:1492,19: Consider changing "not tag in self.tagged_commands" to "tag not in self.tagged_commands" (unneeded-not)
-C:1493,34: More than one statement on a single line (multiple-statements)
-C:1510,42: More than one statement on a single line (multiple-statements)
-R:1474, 8: Too many nested blocks (6/5) (too-many-nested-blocks)
-C:1515,34: More than one statement on a single line (multiple-statements)
-C:1520,32: More than one statement on a single line (multiple-statements)
-C:1521,25: More than one statement on a single line (multiple-statements)
-C:1528,34: More than one statement on a single line (multiple-statements)
-C:1552,26: More than one statement on a single line (multiple-statements)
-R:1448, 4: Too many branches (31/12) (too-many-branches)
-R:1448, 4: Too many statements (78/50) (too-many-statements)
-C:1555, 4: Missing method docstring (missing-docstring)
-R:1555, 4: Method could be a function (no-self-use)
-C:1560, 4: Missing method docstring (missing-docstring)
-C:1564,26: More than one statement on a single line (multiple-statements)
-W:1567,33: Redefining name 'data' from outer scope (line 2335) (redefined-outer-name)
-C:1567, 4: Missing method docstring (missing-docstring)
-C:1572,26: More than one statement on a single line (multiple-statements)
-C:1575,22: More than one statement on a single line (multiple-statements)
-C:1579, 4: Missing method docstring (missing-docstring)
-C:1587,22: More than one statement on a single line (multiple-statements)
-W:1591, 0: Redefining name 'args' from outer scope (line 2306) (redefined-outer-name)
-C:1591, 4: Missing method docstring (missing-docstring)
-W:1600,38: Redefining name 'dat' from outer scope (line 2443) (redefined-outer-name)
-W:1600,33: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
-W:1604, 8: Redefining name 'data' from outer scope (line 2335) (redefined-outer-name)
-C:1600, 4: Missing method docstring (missing-docstring)
-C:1612,22: More than one statement on a single line (multiple-statements)
-C:1620, 4: Missing method docstring (missing-docstring)
-C:1622,22: More than one statement on a single line (multiple-statements)
-C:1627,22: More than one statement on a single line (multiple-statements)
-W:1645,13: Redefining name 'val' from outer scope (line 2311) (redefined-outer-name)
-W:1645, 8: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
-C:1635, 4: Missing method docstring (missing-docstring)
-C:1643,22: More than one statement on a single line (multiple-statements)
-C:1662,38: More than one statement on a single line (multiple-statements)
-C:1668,30: More than one statement on a single line (multiple-statements)
-C:1672,30: More than one statement on a single line (multiple-statements)
-W:1681,12: No exception type(s) specified (bare-except)
-C:1687,22: More than one statement on a single line (multiple-statements)
-C:1702,22: More than one statement on a single line (multiple-statements)
-C:1704,22: More than one statement on a single line (multiple-statements)
-R:1635, 4: Too many branches (23/12) (too-many-branches)
-R:1635, 4: Too many statements (60/50) (too-many-statements)
-W:1747,20: Redefining name 'data' from outer scope (line 2335) (redefined-outer-name)
-C:1709, 6: Missing method docstring (missing-docstring)
-R:1709, 6: Too many local variables (17/15) (too-many-locals)
-C:1713,22: More than one statement on a single line (multiple-statements)
-C:1715, 8: Missing function docstring (missing-docstring)
-C:1716,12: Invalid variable name "PollErrors" (invalid-name)
-W:1774,12: No exception type(s) specified (bare-except)
-C:1739,16: Invalid variable name "r" (invalid-name)
-C:1740,30: More than one statement on a single line (multiple-statements)
-C:1744,16: Invalid variable name "fd" (invalid-name)
-C:1750,34: More than one statement on a single line (multiple-statements)
-C:1767,38: More than one statement on a single line (multiple-statements)
-C:1779,39: More than one statement on a single line (multiple-statements)
-C:1786,22: More than one statement on a single line (multiple-statements)
-W:1744,16: Unused variable 'fd' (unused-variable)
-R:1709, 6: Too many branches (20/12) (too-many-branches)
-R:1709, 6: Too many statements (58/50) (too-many-statements)
-W:1814,16: Redefining name 'data' from outer scope (line 2335) (redefined-outer-name)
-C:1792, 6: Missing method docstring (missing-docstring)
-C:1796,22: More than one statement on a single line (multiple-statements)
-W:1838,12: No exception type(s) specified (bare-except)
-C:1809,16: Invalid variable name "r" (invalid-name)
-C:1809,18: Invalid variable name "w" (invalid-name)
-C:1809,20: Invalid variable name "e" (invalid-name)
-C:1810,30: More than one statement on a single line (multiple-statements)
-C:1817,30: More than one statement on a single line (multiple-statements)
-C:1834,34: More than one statement on a single line (multiple-statements)
-C:1843,39: More than one statement on a single line (multiple-statements)
-C:1848,22: More than one statement on a single line (multiple-statements)
-R:1792, 6: Too many branches (18/12) (too-many-branches)
-R:1792, 6: Too many statements (52/50) (too-many-statements)
-C:1851, 4: Missing method docstring (missing-docstring)
-C:1855,22: More than one statement on a single line (multiple-statements)
-W:1867,12: No exception type(s) specified (bare-except)
-C:1866,30: More than one statement on a single line (multiple-statements)
-C:1872,39: More than one statement on a single line (multiple-statements)
-C:1879,22: More than one statement on a single line (multiple-statements)
-W:1888,59: Redefining name 'debug_buf_lvl' from outer scope (line 2310) (redefined-outer-name)
-W:1888,30: Redefining name 'debug' from outer scope (line 2310) (redefined-outer-name)
-C:1888, 8: Missing method docstring (missing-docstring)
-C:1903, 8: Missing method docstring (missing-docstring)
-C:1907,12: Invalid variable name "l" (invalid-name)
-C:1911,12: Invalid variable name "t" (invalid-name)
-C:1912,12: Invalid variable name "l" (invalid-name)
-R:1912,12: Redefinition of l type from list to map (redefined-variable-type)
-C:1918, 8: Missing method docstring (missing-docstring)
-C:1925,12: Invalid variable name "tn" (invalid-name)
-C:1943, 8: Invalid argument name "s" (invalid-name)
-C:1943, 8: Invalid argument name "tn" (invalid-name)
-C:1943, 8: Missing method docstring (missing-docstring)
-C:1948,12: Invalid variable name "tm" (invalid-name)
-C:1956, 8: Missing method docstring (missing-docstring)
-C:1958,15: Invalid variable name "n" (invalid-name)
-C:1959,18: More than one statement on a single line (multiple-statements)
-W:1963,16: No exception type(s) specified (bare-except)
-C:1968,16: Invalid variable name "n" (invalid-name)
+C:313, 4: Invalid class name "readonly" (invalid-name)
+C:313, 4: Missing class docstring (missing-docstring)
+W:417,17: Redefining name 'dat' from outer scope (line 2345) (redefined-outer-name)
+W:331,43: Redefining name 'debug_buf_lvl' from outer scope (line 2202) (redefined-outer-name)
+W:417,12: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
+W:330,29: Redefining name 'port' from outer scope (line 2202) (redefined-outer-name)
+W:330,18: Redefining name 'host' from outer scope (line 2223) (redefined-outer-name)
+W:330,40: Redefining name 'debug' from outer scope (line 2202) (redefined-outer-name)
+C:409,30: More than one statement on a single line (multiple-statements)
+C:411,30: More than one statement on a single line (multiple-statements)
+C:421,26: More than one statement on a single line (multiple-statements)
+C:424,19: Consider changing "not version in self.capabilities" to "version not in self.capabilities" (unneeded-not)
+W:417,12: Unused variable 'typ' (unused-variable)
+R:329, 4: Too many branches (19/12) (too-many-branches)
+R:329, 4: Too many statements (78/50) (too-many-statements)
+W:446,30: Redefining name 'port' from outer scope (line 2202) (redefined-outer-name)
+W:446,19: Redefining name 'host' from outer scope (line 2223) (redefined-outer-name)
+C:466,12: Invalid variable name "af" (invalid-name)
+C:466,44: Invalid variable name "sa" (invalid-name)
+C:468,16: Invalid variable name "s" (invalid-name)
+W:472,20: Unused variable 'i' (unused-variable)
+W:466,33: Unused variable 'canonname' (unused-variable)
+C:489, 4: Missing method docstring (missing-docstring)
+E:508,29: Module 'socket' has no 'sslerror' member (no-member)
+E:520,25: Module 'socket' has no 'sslerror' member (no-member)
+W:541,12: Redefining name 'data' from outer scope (line 2225) (redefined-outer-name)
+W:546,19: Redefining name 'data' from outer scope (line 2225) (redefined-outer-name)
+W:571,17: Redefining name 'dat' from outer scope (line 2345) (redefined-outer-name)
+W:571,12: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
+C:574,30: More than one statement on a single line (multiple-statements)
+W:571,17: Unused variable 'dat' (unused-variable)
+W:597,13: Redefining name 'dat' from outer scope (line 2345) (redefined-outer-name)
+W:597, 8: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
+W:608,13: Redefining name 'dat' from outer scope (line 2345) (redefined-outer-name)
+W:608, 8: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
+W:651,12: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
+W:651,17: Redefining name 'dat' from outer scope (line 2345) (redefined-outer-name)
+C:655,26: More than one statement on a single line (multiple-statements)
+W:681,17: Redefining name 'dat' from outer scope (line 2345) (redefined-outer-name)
+W:681,12: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
+C:684,26: More than one statement on a single line (multiple-statements)
+W:766, 8: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
+W:766,13: Redefining name 'dat' from outer scope (line 2345) (redefined-outer-name)
+C:772, 4: Invalid method name "id" (invalid-name)
+W:784,12: Redefining name 'data' from outer scope (line 2225) (redefined-outer-name)
+W:824,12: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
+W:824,17: Redefining name 'dat' from outer scope (line 2345) (redefined-outer-name)
+C:829,26: More than one statement on a single line (multiple-statements)
+C:840, 4: Invalid method name "_CRAM_MD5_AUTH" (invalid-name)
+W:858,21: Redefining name 'dat' from outer scope (line 2345) (redefined-outer-name)
+W:858,16: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
+C:854,22: More than one statement on a single line (multiple-statements)
+W:859,12: No exception type(s) specified (bare-except)
+C:861,30: More than one statement on a single line (multiple-statements)
+C:867,22: More than one statement on a single line (multiple-statements)
+C:905,22: More than one statement on a single line (multiple-statements)
+W:966,12: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
+W:966,17: Redefining name 'dat' from outer scope (line 2345) (redefined-outer-name)
+C:970,30: More than one statement on a single line (multiple-statements)
+C:980,26: More than one statement on a single line (multiple-statements)
+C:986,26: More than one statement on a single line (multiple-statements)
+W:1001, 0: Redefining name 'args' from outer scope (line 2198) (redefined-outer-name)
+W:1027,18: Redefining name 'keyfile' from outer scope (line 2202) (redefined-outer-name)
+W:1043,12: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
+W:1027,32: Redefining name 'certfile' from outer scope (line 2202) (redefined-outer-name)
+W:1043,17: Redefining name 'dat' from outer scope (line 2345) (redefined-outer-name)
+W:1108, 0: Redefining name 'args' from outer scope (line 2198) (redefined-outer-name)
+W:1131, 0: Redefining name 'args' from outer scope (line 2198) (redefined-outer-name)
+C:1138,11: Consider changing "not name in Commands" to "name not in Commands" (unneeded-not)
+C:1145, 4: Missing method docstring (missing-docstring)
+W:1145,36: Redefining name 'dat' from outer scope (line 2345) (redefined-outer-name)
+W:1145,31: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
+C:1169, 4: Missing method docstring (missing-docstring)
+C:1174, 4: Missing method docstring (missing-docstring)
+C:1187, 4: Missing method docstring (missing-docstring)
+W:1187, 0: Redefining name 'args' from outer scope (line 2198) (redefined-outer-name)
+R:1191,12: Redefinition of dflttyp type from tuple to type (redefined-variable-type)
+C:1204, 4: Missing method docstring (missing-docstring)
+W:1252, 8: Redefining name 'data' from outer scope (line 2225) (redefined-outer-name)
+W:1243,12: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
+W:1204, 0: Redefining name 'args' from outer scope (line 2198) (redefined-outer-name)
+C:1217,26: More than one statement on a single line (multiple-statements)
+C:1254,28: More than one statement on a single line (multiple-statements)
+C:1275,12: Invalid variable name "ok" (invalid-name)
+C:1276,26: More than one statement on a single line (multiple-statements)
+R:1282,16: Redefinition of literal type from instancemethod to str (redefined-variable-type)
+R:1204, 4: Too many branches (31/12) (too-many-branches)
+R:1204, 4: Too many statements (77/50) (too-many-statements)
+C:1296, 4: Invalid argument name "kw" (invalid-name)
+C:1296, 4: Missing method docstring (missing-docstring)
+W:1299,13: Redefining name 'dat' from outer scope (line 2345) (redefined-outer-name)
+W:1299, 8: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
+C:1311, 4: Missing method docstring (missing-docstring)
+W:1319,12: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
+W:1326,13: Redefining name 'dat' from outer scope (line 2345) (redefined-outer-name)
+W:1319,17: Redefining name 'val' from outer scope (line 2203) (redefined-outer-name)
+C:1313,13: Invalid variable name "kw" (invalid-name)
+C:1341, 4: Invalid argument name "kw" (invalid-name)
+C:1341, 4: Missing method docstring (missing-docstring)
+W:1341,32: Redefining name 'dat' from outer scope (line 2345) (redefined-outer-name)
+W:1341,27: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
+R:1341, 4: Method could be a function (no-self-use)
+C:1346, 4: Invalid argument name "kw" (invalid-name)
+C:1346, 4: Missing method docstring (missing-docstring)
+W:1346,32: Redefining name 'dat' from outer scope (line 2345) (redefined-outer-name)
+R:1346, 4: Method could be a function (no-self-use)
+C:1351, 4: Missing method docstring (missing-docstring)
+C:1362,22: More than one statement on a single line (multiple-statements)
+C:1364, 4: Missing method docstring (missing-docstring)
+W:1366,16: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
+W:1366,21: Redefining name 'dat' from outer scope (line 2345) (redefined-outer-name)
+C:1380, 4: Invalid argument name "s" (invalid-name)
+C:1380, 4: Missing method docstring (missing-docstring)
+C:1386, 4: Missing method docstring (missing-docstring)
+W:1398,12: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
+W:1398,17: Redefining name 'dat' from outer scope (line 2345) (redefined-outer-name)
+R:1403, 8: The if statement can be reduced by assigning bool of test (simplifiable-if-statement)
+C:1423,26: More than one statement on a single line (multiple-statements)
+C:1430,19: Consider changing "not tag in self.tagged_commands" to "tag not in self.tagged_commands" (unneeded-not)
+R:1407, 8: Too many nested blocks (6/5) (too-many-nested-blocks)
+C:1493,26: More than one statement on a single line (multiple-statements)
+R:1386, 4: Too many branches (31/12) (too-many-branches)
+R:1386, 4: Too many statements (78/50) (too-many-statements)
+C:1495, 4: Missing method docstring (missing-docstring)
+R:1495, 4: Method could be a function (no-self-use)
+C:1498, 4: Missing method docstring (missing-docstring)
+C:1501,26: More than one statement on a single line (multiple-statements)
+C:1503, 4: Missing method docstring (missing-docstring)
+W:1503,33: Redefining name 'data' from outer scope (line 2225) (redefined-outer-name)
+C:1507,26: More than one statement on a single line (multiple-statements)
+C:1514, 4: Missing method docstring (missing-docstring)
+C:1529, 4: Missing method docstring (missing-docstring)
+W:1529, 0: Redefining name 'args' from outer scope (line 2198) (redefined-outer-name)
+C:1539, 4: Missing method docstring (missing-docstring)
+W:1542, 8: Redefining name 'data' from outer scope (line 2225) (redefined-outer-name)
+W:1539,38: Redefining name 'dat' from outer scope (line 2345) (redefined-outer-name)
+W:1539,33: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
+C:1557, 4: Missing method docstring (missing-docstring)
+C:1568, 4: Missing method docstring (missing-docstring)
+W:1574,13: Redefining name 'val' from outer scope (line 2203) (redefined-outer-name)
+W:1574, 8: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
+C:1603,30: More than one statement on a single line (multiple-statements)
+W:1610,12: No exception type(s) specified (bare-except)
+R:1568, 4: Too many branches (23/12) (too-many-branches)
+R:1568, 4: Too many statements (60/50) (too-many-statements)
+C:1637, 6: Missing method docstring (missing-docstring)
+W:1669,20: Redefining name 'data' from outer scope (line 2225) (redefined-outer-name)
+R:1637, 6: Too many local variables (17/15) (too-many-locals)
+C:1642, 8: Missing function docstring (missing-docstring)
+C:1643,12: Invalid variable name "PollErrors" (invalid-name)
+W:1697,12: No exception type(s) specified (bare-except)
+C:1662,16: Invalid variable name "r" (invalid-name)
+C:1667,16: Invalid variable name "fd" (invalid-name)
+C:1690,38: More than one statement on a single line (multiple-statements)
+C:1702,39: More than one statement on a single line (multiple-statements)
+W:1667,16: Unused variable 'fd' (unused-variable)
+R:1637, 6: Too many branches (20/12) (too-many-branches)
+R:1637, 6: Too many statements (58/50) (too-many-statements)
+C:1715, 6: Missing method docstring (missing-docstring)
+W:1732,16: Redefining name 'data' from outer scope (line 2225) (redefined-outer-name)
+W:1758,12: No exception type(s) specified (bare-except)
+C:1728,16: Invalid variable name "r" (invalid-name)
+C:1728,18: Invalid variable name "w" (invalid-name)
+C:1728,20: Invalid variable name "e" (invalid-name)
+C:1729,30: More than one statement on a single line (multiple-statements)
+C:1763,39: More than one statement on a single line (multiple-statements)
+R:1715, 6: Too many branches (18/12) (too-many-branches)
+R:1715, 6: Too many statements (52/50) (too-many-statements)
+C:1770, 4: Missing method docstring (missing-docstring)
+W:1783,12: No exception type(s) specified (bare-except)
+C:1799, 8: Missing method docstring (missing-docstring)
+W:1800,51: Redefining name 'debug_buf_lvl' from outer scope (line 2202) (redefined-outer-name)
+W:1800,22: Redefining name 'debug' from outer scope (line 2202) (redefined-outer-name)
+C:1817, 8: Missing method docstring (missing-docstring)
+C:1820,12: Invalid variable name "l" (invalid-name)
+C:1823,12: Invalid variable name "t" (invalid-name)
+C:1824,12: Invalid variable name "l" (invalid-name)
+R:1824,12: Redefinition of l type from list to map (redefined-variable-type)
+C:1833, 8: Missing method docstring (missing-docstring)
+C:1838,12: Invalid variable name "tn" (invalid-name)
+C:1853, 8: Invalid argument name "s" (invalid-name)
+C:1853, 8: Invalid argument name "tn" (invalid-name)
+C:1853, 8: Missing method docstring (missing-docstring)
+C:1858,12: Invalid variable name "tm" (invalid-name)
+C:1868, 8: Missing method docstring (missing-docstring)
+C:1870,15: Invalid variable name "n" (invalid-name)
+C:1871,18: More than one statement on a single line (multiple-statements)
+W:1875,16: No exception type(s) specified (bare-except)
+C:1880,16: Invalid variable name "n" (invalid-name)
 R:228, 0: Too many public methods (55/20) (too-many-public-methods)
-E:1050,54: Access to member '_tls_established' before its definition line 1092 (access-member-before-definition)
-W:845,24: Attribute 'password' defined outside __init__ (attribute-defined-outside-init)
-W:845,13: Attribute 'user' defined outside __init__ (attribute-defined-outside-init)
-W:1073,13: Attribute 'keyfile' defined outside __init__ (attribute-defined-outside-init)
-W:518,17: Attribute 'sock' defined outside __init__ (attribute-defined-outside-init)
-W:524,17: Attribute 'read_fd' defined outside __init__ (attribute-defined-outside-init)
-W:1074,13: Attribute 'certfile' defined outside __init__ (attribute-defined-outside-init)
-W:1075,13: Attribute 'ca_certs' defined outside __init__ (attribute-defined-outside-init)
-W:1092,13: Attribute '_tls_established' defined outside __init__ (attribute-defined-outside-init)
-W:1077,13: Attribute 'ssl_version' defined outside __init__ (attribute-defined-outside-init)
-W:1076,13: Attribute 'cert_verify_cb' defined outside __init__ (attribute-defined-outside-init)
-W:1444,13: Attribute 'mo' defined outside __init__ (attribute-defined-outside-init)
-C:1973, 0: Invalid class name "IMAP4_SSL" (invalid-name)
-R:1973, 0: Too many instance attributes (8/7) (too-many-instance-attributes)
-W:1997,23: Redefining name 'host' from outer scope (line 2331) (redefined-outer-name)
-W:1997,59: Redefining name 'certfile' from outer scope (line 2310) (redefined-outer-name)
-W:1997,191: Redefining name 'debug_buf_lvl' from outer scope (line 2310) (redefined-outer-name)
-W:1997,45: Redefining name 'keyfile' from outer scope (line 2310) (redefined-outer-name)
-W:1997,34: Redefining name 'port' from outer scope (line 2310) (redefined-outer-name)
-W:1997,131: Redefining name 'debug' from outer scope (line 2310) (redefined-outer-name)
-W:2006,19: Redefining name 'host' from outer scope (line 2331) (redefined-outer-name)
-W:2006,30: Redefining name 'port' from outer scope (line 2310) (redefined-outer-name)
-W:2027,12: Redefining name 'data' from outer scope (line 2335) (redefined-outer-name)
-W:2034,19: Redefining name 'data' from outer scope (line 2335) (redefined-outer-name)
-W:2045,12: Redefining name 'bytes' from outer scope (line 35) (redefined-outer-name)
-C:2062, 0: Invalid class name "IMAP4_stream" (invalid-name)
-C:2099,13: Invalid attribute name "_P" (invalid-name)
-R:2062, 0: Too many instance attributes (8/7) (too-many-instance-attributes)
-W:2080,92: Redefining name 'debug_buf_lvl' from outer scope (line 2310) (redefined-outer-name)
-W:2080,32: Redefining name 'debug' from outer scope (line 2310) (redefined-outer-name)
-W:2090,19: Redefining name 'host' from outer scope (line 2331) (redefined-outer-name)
-W:2090,30: Redefining name 'port' from outer scope (line 2310) (redefined-outer-name)
-C:2098,22: More than one statement on a single line (multiple-statements)
-W:2111,12: Redefining name 'data' from outer scope (line 2335) (redefined-outer-name)
-W:2118,19: Redefining name 'data' from outer scope (line 2335) (redefined-outer-name)
-W:2144,22: Redefining name 'data' from outer scope (line 2335) (redefined-outer-name)
-C:2144, 4: Missing method docstring (missing-docstring)
-W:2144,28: Unused argument 'rqb' (unused-argument)
-C:2150, 4: Missing method docstring (missing-docstring)
-C:2162,16: Invalid variable name "t" (invalid-name)
-C:2165,16: Invalid variable name "t" (invalid-name)
-C:2167,12: Invalid variable name "e" (invalid-name)
-R:2150, 4: Method could be a function (no-self-use)
-C:2172, 4: Missing method docstring (missing-docstring)
-R:2172, 4: Method could be a function (no-self-use)
-W:2187,30: Access to a protected member _choose_nonull_or_dflt of a client class (protected-access)
-W:2190,22: Redefining name 'data' from outer scope (line 2335) (redefined-outer-name)
-C:2190, 4: Missing method docstring (missing-docstring)
-C:2195,22: More than one statement on a single line (multiple-statements)
-W:2195,34: Access to a protected member _log of a client class (protected-access)
-W:2190,22: Unused argument 'data' (unused-argument)
-R:2180, 0: Too few public methods (1/2) (too-few-public-methods)
-C:2200, 0: Invalid constant name "MonthNames" (invalid-name)
-C:2203, 0: Invalid constant name "Mon2num" (invalid-name)
-C:2205, 0: Invalid constant name "InternalDate" (invalid-name)
-W:2227, 4: Redefining built-in 'min' (redefined-builtin)
-W:2217, 4: Redefining name 'mo' from outer scope (line 2428) (redefined-outer-name)
-C:2212, 0: Invalid function name "Internaldate2Time" (invalid-name)
-C:2217, 4: Invalid variable name "mo" (invalid-name)
-C:2238, 4: Invalid variable name "tt" (invalid-name)
-C:2245, 4: Invalid variable name "lt" (invalid-name)
-C:2253, 0: Invalid constant name "Internaldate2tuple" (invalid-name)
-C:2257, 0: Invalid function name "Time2Internaldate" (invalid-name)
-C:2263, 8: Invalid variable name "tt" (invalid-name)
-C:2265, 8: Invalid variable name "tt" (invalid-name)
-C:2281, 0: Invalid constant name "FLAGS_cre" (invalid-name)
-W:2288, 4: Redefining name 'mo' from outer scope (line 2428) (redefined-outer-name)
-C:2283, 0: Invalid function name "ParseFlags" (invalid-name)
-C:2288, 4: Invalid variable name "mo" (invalid-name)
-C:2303, 4: Multiple imports on one line (getopt, getpass) (multiple-imports)
-C:2303, 4: Import "import getopt, getpass" should be placed at the top of the module (wrong-import-position)
-C:2303, 4: Import "import getopt, getpass" should be placed at the top of the module (wrong-import-position)
-W:2307, 4: No exception type(s) specified (bare-except)
-C:2306, 8: Invalid constant name "optlist" (invalid-name)
-C:2306,17: Invalid constant name "args" (invalid-name)
-C:2308, 8: Invalid constant name "optlist" (invalid-name)
-C:2308,17: Invalid constant name "args" (invalid-name)
-C:2310, 4: Invalid constant name "debug" (invalid-name)
-C:2310,11: Invalid constant name "debug_buf_lvl" (invalid-name)
-C:2310,26: Invalid constant name "port" (invalid-name)
-C:2310,32: Invalid constant name "stream_command" (invalid-name)
-C:2310,48: Invalid constant name "keyfile" (invalid-name)
-C:2310,57: Invalid constant name "certfile" (invalid-name)
-C:2310,67: Invalid constant name "idle_intr" (invalid-name)
-C:2326,25: More than one statement on a single line (multiple-statements)
-C:2328,17: More than one statement on a single line (multiple-statements)
-C:2328,17: Invalid constant name "args" (invalid-name)
-C:2329,17: More than one statement on a single line (multiple-statements)
-C:2329,17: Invalid constant name "port" (invalid-name)
-C:2331, 4: Invalid constant name "host" (invalid-name)
-C:2335, 4: Invalid constant name "data" (invalid-name)
-C:2336, 4: Invalid constant name "test_mesg" (invalid-name)
-C:2339, 4: Invalid constant name "test_seq1" (invalid-name)
-C:2356, 4: Invalid constant name "test_seq2" (invalid-name)
-C:2368, 4: Invalid constant name "AsyncError" (invalid-name)
-W:2372,13: Redefining name 'args' from outer scope (line 2306) (redefined-outer-name)
-W:2377, 8: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
-W:2372, 8: Redefining name 'cmd' from outer scope (line 2424) (redefined-outer-name)
-W:2377,13: Redefining name 'dat' from outer scope (line 2443) (redefined-outer-name)
-C:2370, 4: Missing function docstring (missing-docstring)
-W:2371, 8: Using the global statement (global-statement)
-C:2371, 8: Invalid constant name "AsyncError" (invalid-name)
-W:2375,14: Access to a protected member _log of a client class (protected-access)
-W:2378,10: Access to a protected member _log of a client class (protected-access)
-W:2386,17: Redefining name 'val' from outer scope (line 2311) (redefined-outer-name)
-W:2391,21: Redefining name 'dat' from outer scope (line 2443) (redefined-outer-name)
-W:2382,17: Redefining name 'args' from outer scope (line 2306) (redefined-outer-name)
-W:2386,12: Redefining name 'typ' from outer scope (line 2485) (redefined-outer-name)
-W:2382,12: Redefining name 'cmd' from outer scope (line 2424) (redefined-outer-name)
-C:2382, 4: Invalid argument name "cb" (invalid-name)
-C:2382, 4: Missing function docstring (missing-docstring)
-W:2384,14: Access to a protected member _log of a client class (protected-access)
-C:2388,24: More than one statement on a single line (multiple-statements)
-W:2388,26: Access to a protected member _log of a client class (protected-access)
-W:2392,18: Access to a protected member _log of a client class (protected-access)
-W:2395,18: Access to a protected member _log of a client class (protected-access)
-W:2397,14: Access to a protected member _log of a client class (protected-access)
-W:2401,14: Access to a protected member _log of a client class (protected-access)
-W:2489, 4: No exception type(s) specified (bare-except)
-C:2410,28: More than one statement on a single line (multiple-statements)
-C:2410,28: Invalid constant name "keyfile" (invalid-name)
-C:2411,29: More than one statement on a single line (multiple-statements)
-C:2411,29: Invalid constant name "certfile" (invalid-name)
-W:2420,10: Access to a protected member _log of a client class (protected-access)
-C:2429,19: More than one statement on a single line (multiple-statements)
-C:2445,24: More than one statement on a single line (multiple-statements)
-C:2458,12: Invalid constant name "num" (invalid-name)
-C:2459,12: Invalid constant name "dat" (invalid-name)
-W:2460,14: Access to a protected member _mesg of a client class (protected-access)
-W:2462,12: Expression "(run('store', (num, '-FLAGS', '(\\Seen)'), cb=False), )" is assigned to nothing (expression-not-assigned)
-C:2463,12: Invalid constant name "dat" (invalid-name)
-W:2464,14: Access to a protected member _mesg of a client class (protected-access)
-W:2468,18: Access to a protected member _mesg of a client class (protected-access)
-W:2472,22: Access to a protected member _mesg of a client class (protected-access)
-W:2473,22: Access to a protected member _mesg of a client class (protected-access)
-W:2476,14: Access to a protected member _mesg of a client class (protected-access)
-W:2481,14: Access to a protected member _mesg of a client class (protected-access)
-W:2482,14: Access to a protected member _print_log of a client class (protected-access)
-W:2483,14: Access to a protected member _mesg of a client class (protected-access)
-W:2484,14: Access to a protected member _mesg of a client class (protected-access)
-C:2485,55: More than one statement on a single line (multiple-statements)
-W:2485,57: Access to a protected member _mesg of a client class (protected-access)
-C:2490,28: Consider changing "not 'IDLE' in M.capabilities" to "'IDLE' not in M.capabilities" (unneeded-not)
-R:2414,12: Redefinition of M type from offlineimap.imaplib2.IMAP4_SSL to offlineimap.imaplib2.IMAP4_stream (redefined-variable-type)
+E:1036,54: Access to member '_tls_established' before its definition line 1071 (access-member-before-definition)
+W:1057,13: Attribute 'ca_certs' defined outside __init__ (attribute-defined-outside-init)
+W:837,24: Attribute 'password' defined outside __init__ (attribute-defined-outside-init)
+W:1055,13: Attribute 'keyfile' defined outside __init__ (attribute-defined-outside-init)
+W:510,17: Attribute 'sock' defined outside __init__ (attribute-defined-outside-init)
+W:1071,13: Attribute '_tls_established' defined outside __init__ (attribute-defined-outside-init)
+W:837,13: Attribute 'user' defined outside __init__ (attribute-defined-outside-init)
+W:1056,13: Attribute 'certfile' defined outside __init__ (attribute-defined-outside-init)
+W:1058,13: Attribute 'cert_verify_cb' defined outside __init__ (attribute-defined-outside-init)
+W:516,17: Attribute 'read_fd' defined outside __init__ (attribute-defined-outside-init)
+W:1059,13: Attribute 'ssl_version' defined outside __init__ (attribute-defined-outside-init)
+W:1383,13: Attribute 'mo' defined outside __init__ (attribute-defined-outside-init)
+C:1884, 0: Invalid class name "IMAP4_SSL" (invalid-name)
+R:1884, 0: Too many instance attributes (8/7) (too-many-instance-attributes)
+W:1914,40: Redefining name 'keyfile' from outer scope (line 2202) (redefined-outer-name)
+W:1914,54: Redefining name 'certfile' from outer scope (line 2202) (redefined-outer-name)
+W:1917,12: Redefining name 'debug_buf_lvl' from outer scope (line 2202) (redefined-outer-name)
+W:1916,12: Redefining name 'debug' from outer scope (line 2202) (redefined-outer-name)
+W:1914,29: Redefining name 'port' from outer scope (line 2202) (redefined-outer-name)
+W:1914,18: Redefining name 'host' from outer scope (line 2223) (redefined-outer-name)
+W:1928,30: Redefining name 'port' from outer scope (line 2202) (redefined-outer-name)
+W:1928,19: Redefining name 'host' from outer scope (line 2223) (redefined-outer-name)
+W:1949,12: Redefining name 'data' from outer scope (line 2225) (redefined-outer-name)
+W:1954,19: Redefining name 'data' from outer scope (line 2225) (redefined-outer-name)
+W:1963,12: Redefining name 'bytes' from outer scope (line 35) (redefined-outer-name)
+C:1977, 0: Invalid class name "IMAP4_stream" (invalid-name)
+C:2018,13: Invalid attribute name "_P" (invalid-name)
+R:1977, 0: Too many instance attributes (8/7) (too-many-instance-attributes)
+W:1998,26: Redefining name 'debug_buf_lvl' from outer scope (line 2202) (redefined-outer-name)
+W:1997,27: Redefining name 'debug' from outer scope (line 2202) (redefined-outer-name)
+W:2010,30: Redefining name 'port' from outer scope (line 2202) (redefined-outer-name)
+W:2010,19: Redefining name 'host' from outer scope (line 2223) (redefined-outer-name)
+W:2028,12: Redefining name 'data' from outer scope (line 2225) (redefined-outer-name)
+W:2033,19: Redefining name 'data' from outer scope (line 2225) (redefined-outer-name)
+C:2053, 4: Missing method docstring (missing-docstring)
+W:2053,22: Redefining name 'data' from outer scope (line 2225) (redefined-outer-name)
+W:2053,28: Unused argument 'rqb' (unused-argument)
+C:2059, 4: Missing method docstring (missing-docstring)
+C:2071,16: Invalid variable name "t" (invalid-name)
+C:2074,16: Invalid variable name "t" (invalid-name)
+C:2076,12: Invalid variable name "e" (invalid-name)
+R:2059, 4: Method could be a function (no-self-use)
+C:2081, 4: Missing method docstring (missing-docstring)
+R:2081, 4: Method could be a function (no-self-use)
+W:2093,30: Access to a protected member _choose_nonull_or_dflt of a client class (protected-access)
+C:2096, 4: Missing method docstring (missing-docstring)
+W:2096,22: Redefining name 'data' from outer scope (line 2225) (redefined-outer-name)
+W:2102,24: Access to a protected member _log of a client class (protected-access)
+W:2096,22: Unused argument 'data' (unused-argument)
+R:2087, 0: Too few public methods (1/2) (too-few-public-methods)
+C:2109, 0: Invalid constant name "MonthNames" (invalid-name)
+C:2114, 0: Invalid constant name "Mon2num" (invalid-name)
+C:2116, 0: Invalid constant name "InternalDate" (invalid-name)
+C:2123, 0: Invalid function name "Internaldate2Time" (invalid-name)
+W:2134, 4: Redefining built-in 'min' (redefined-builtin)
+W:2126, 4: Redefining name 'mo' from outer scope (line 2330) (redefined-outer-name)
+C:2126, 4: Invalid variable name "mo" (invalid-name)
+C:2143, 4: Invalid variable name "tt" (invalid-name)
+C:2148, 4: Invalid variable name "lt" (invalid-name)
+C:2155, 0: Invalid constant name "Internaldate2tuple" (invalid-name)
+C:2159, 0: Invalid function name "Time2Internaldate" (invalid-name)
+C:2163, 8: Invalid variable name "tt" (invalid-name)
+C:2165, 8: Invalid variable name "tt" (invalid-name)
+C:2180, 0: Invalid constant name "FLAGS_cre" (invalid-name)
+C:2182, 0: Invalid function name "ParseFlags" (invalid-name)
+W:2185, 4: Redefining name 'mo' from outer scope (line 2330) (redefined-outer-name)
+C:2185, 4: Invalid variable name "mo" (invalid-name)
+C:2196, 4: Multiple imports on one line (getopt, getpass) (multiple-imports)
+C:2196, 4: Import "import getopt, getpass" should be placed at the top of the module (wrong-import-position)
+C:2196, 4: Import "import getopt, getpass" should be placed at the top of the module (wrong-import-position)
+W:2199, 4: No exception type(s) specified (bare-except)
+C:2198, 8: Invalid constant name "optlist" (invalid-name)
+C:2198,17: Invalid constant name "args" (invalid-name)
+C:2200, 8: Invalid constant name "optlist" (invalid-name)
+C:2200,17: Invalid constant name "args" (invalid-name)
+C:2202, 4: Invalid constant name "debug" (invalid-name)
+C:2202,11: Invalid constant name "debug_buf_lvl" (invalid-name)
+C:2202,26: Invalid constant name "port" (invalid-name)
+C:2202,32: Invalid constant name "stream_command" (invalid-name)
+C:2202,48: Invalid constant name "keyfile" (invalid-name)
+C:2202,57: Invalid constant name "certfile" (invalid-name)
+C:2202,67: Invalid constant name "idle_intr" (invalid-name)
+C:2218,25: More than one statement on a single line (multiple-statements)
+C:2220, 8: Invalid constant name "args" (invalid-name)
+C:2222, 8: Invalid constant name "port" (invalid-name)
+C:2223, 4: Invalid constant name "host" (invalid-name)
+C:2225, 4: Invalid constant name "data" (invalid-name)
+C:2227, 4: Invalid constant name "test_mesg" (invalid-name)
+C:2230, 4: Invalid constant name "test_seq1" (invalid-name)
+C:2247, 4: Invalid constant name "test_seq2" (invalid-name)
+C:2258, 4: Invalid constant name "AsyncError" (invalid-name)
+C:2260, 4: Missing function docstring (missing-docstring)
+W:2262, 8: Redefining name 'cmd' from outer scope (line 2326) (redefined-outer-name)
+W:2267, 8: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
+W:2262,13: Redefining name 'args' from outer scope (line 2198) (redefined-outer-name)
+W:2267,13: Redefining name 'dat' from outer scope (line 2345) (redefined-outer-name)
+C:2261, 8: Invalid constant name "AsyncError" (invalid-name)
+W:2261, 8: Using the global statement (global-statement)
+W:2265,14: Access to a protected member _log of a client class (protected-access)
+W:2268,10: Access to a protected member _log of a client class (protected-access)
+C:2272, 4: Invalid argument name "cb" (invalid-name)
+C:2272, 4: Missing function docstring (missing-docstring)
+W:2272,12: Redefining name 'cmd' from outer scope (line 2326) (redefined-outer-name)
+W:2276,17: Redefining name 'val' from outer scope (line 2203) (redefined-outer-name)
+W:2276,12: Redefining name 'typ' from outer scope (line 2391) (redefined-outer-name)
+W:2272,17: Redefining name 'args' from outer scope (line 2198) (redefined-outer-name)
+W:2281,21: Redefining name 'dat' from outer scope (line 2345) (redefined-outer-name)
+W:2274,14: Access to a protected member _log of a client class (protected-access)
+C:2278,24: More than one statement on a single line (multiple-statements)
+W:2278,26: Access to a protected member _log of a client class (protected-access)
+W:2282,18: Access to a protected member _log of a client class (protected-access)
+W:2285,18: Access to a protected member _log of a client class (protected-access)
+W:2287,14: Access to a protected member _log of a client class (protected-access)
+W:2291,14: Access to a protected member _log of a client class (protected-access)
+C:2300,28: More than one statement on a single line (multiple-statements)
+C:2300,28: Invalid constant name "keyfile" (invalid-name)
+C:2301,29: More than one statement on a single line (multiple-statements)
+C:2301,29: Invalid constant name "certfile" (invalid-name)
+W:2322,10: Access to a protected member _log of a client class (protected-access)
+C:2331,19: More than one statement on a single line (multiple-statements)
+C:2347,24: More than one statement on a single line (multiple-statements)
+C:2364,12: Invalid constant name "num" (invalid-name)
+C:2365,12: Invalid constant name "dat" (invalid-name)
+W:2366,14: Access to a protected member _mesg of a client class (protected-access)
+W:2368,12: Expression "(run('store', (num, '-FLAGS', '(\\Seen)'), cb=False), )" is assigned to nothing (expression-not-assigned)
+C:2369,12: Invalid constant name "dat" (invalid-name)
+W:2370,14: Access to a protected member _mesg of a client class (protected-access)
+W:2374,18: Access to a protected member _mesg of a client class (protected-access)
+W:2378,22: Access to a protected member _mesg of a client class (protected-access)
+W:2379,22: Access to a protected member _mesg of a client class (protected-access)
+W:2382,14: Access to a protected member _mesg of a client class (protected-access)
+W:2387,14: Access to a protected member _mesg of a client class (protected-access)
+W:2388,14: Access to a protected member _print_log of a client class (protected-access)
+W:2389,14: Access to a protected member _mesg of a client class (protected-access)
+W:2390,14: Access to a protected member _mesg of a client class (protected-access)
+W:2392,18: Access to a protected member _mesg of a client class (protected-access)
+C:2395,28: Consider changing "not 'IDLE' in M.capabilities" to "'IDLE' not in M.capabilities" (unneeded-not)
+R:2308,12: Redefinition of M type from offlineimap.imaplib2.IMAP4_SSL to offlineimap.imaplib2.IMAP4_stream (redefined-variable-type)
 
 
 Report
@@ -1068,13 +682,13 @@ Raw metrics
 +----------+-------+------+---------+-----------+
 |type      |number |%     |previous |difference |
 +==========+=======+======+=========+===========+
-|code      |1519   |60.71 |1519     |=          |
+|code      |1665   |69.20 |1519     |+146.00    |
 +----------+-------+------+---------+-----------+
-|docstring |397    |15.87 |397      |=          |
+|docstring |438    |18.20 |397      |+41.00     |
 +----------+-------+------+---------+-----------+
-|comment   |82     |3.28  |82       |=          |
+|comment   |77     |3.20  |82       |-5.00      |
 +----------+-------+------+---------+-----------+
-|empty     |504    |20.14 |504      |=          |
+|empty     |226    |9.39  |504      |-278.00    |
 +----------+-------+------+---------+-----------+
 
 
@@ -1098,11 +712,11 @@ Messages by category
 +-----------+-------+---------+-----------+
 |type       |number |previous |difference |
 +===========+=======+=========+===========+
-|convention |451    |463      |-12.00     |
+|convention |243    |365      |-122.00    |
 +-----------+-------+---------+-----------+
 |refactor   |30     |30       |=          |
 +-----------+-------+---------+-----------+
-|warning    |272    |272      |=          |
+|warning    |280    |272      |+8.00      |
 +-----------+-------+---------+-----------+
 |error      |3      |3        |=          |
 +-----------+-------+---------+-----------+
@@ -1115,27 +729,27 @@ Messages
 +--------------------------------+------------+
 |message id                      |occurrences |
 +================================+============+
-|bad-indentation                 |111         |
+|bad-indentation                 |120         |
 +--------------------------------+------------+
 |redefined-outer-name            |101         |
 +--------------------------------+------------+
 |invalid-name                    |94          |
 +--------------------------------+------------+
-|multiple-statements             |86          |
-+--------------------------------+------------+
-|line-too-long                   |76          |
-+--------------------------------+------------+
-|bad-continuation                |72          |
-+--------------------------------+------------+
-|bad-whitespace                  |70          |
-+--------------------------------+------------+
 |missing-docstring               |43          |
++--------------------------------+------------+
+|multiple-statements             |34          |
++--------------------------------+------------+
+|bad-continuation                |25          |
 +--------------------------------+------------+
 |protected-access                |24          |
 +--------------------------------+------------+
+|bad-whitespace                  |24          |
++--------------------------------+------------+
+|line-too-long                   |13          |
++--------------------------------+------------+
 |attribute-defined-outside-init  |11          |
 +--------------------------------+------------+
-|bare-except                     |8           |
+|bare-except                     |7           |
 +--------------------------------+------------+
 |too-many-statements             |6           |
 +--------------------------------+------------+
@@ -1188,5 +802,5 @@ Messages
 
 Global evaluation
 -----------------
-Your code has been rated at 4.73/10 (previous run: 4.64/10, +0.08)
+Your code has been rated at 6.10/10 (previous run: 5.32/10, +0.78)
 
