@@ -441,7 +441,7 @@ class IMAP4(object):
                         if len(msg.args) < 2 or msg.args[0] != errno.EINTR:
                             raise
                 else:
-                    raise OSerror(msg)
+                    raise OSError(msg)
             except OSError as msg:
                 s.close()
                 continue
@@ -2385,7 +2385,7 @@ if __name__ == '__main__':
 
     AsyncError = None
 
-    def responder((response, cb_arg, error)):
+    def responder(response, cb_arg, error):
         global AsyncError
         cmd, args = cb_arg
         if error is not None:
