@@ -47,7 +47,18 @@ __author__ = "Piers Lauder <piers@janeelix.com>"
 __URL__ = "http://imaplib2.sourceforge.net"
 __license__ = "Python License"
 
-import binascii, errno, os, Queue, random, re, select, socket, sys, time, threading, zlib
+import binascii
+import errno
+import os
+import queue
+import random
+import re
+import select
+import socket
+import sys
+import time
+import threading
+import zlib
 
 select_module = select
 
