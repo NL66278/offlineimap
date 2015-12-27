@@ -2502,16 +2502,16 @@ if __name__ == '__main__':
             M._mesg('unused untagged responses in order, most recent last:')
             for typ,dat in M.pop_untagged_responses(): M._mesg('\t%s %s' % (typ, dat))
 
-        print 'All tests OK.'
+        print('All tests OK.')
 
     except:
         if not idle_intr or not 'IDLE' in M.capabilities:
-            print 'Tests failed.'
+            print('Tests failed.')
 
             if not debug:
-                print '''
+                print('''
 If you would like to see debugging output,
 try: %s -d5
-''' % sys.argv[0]
+''' % sys.argv[0])
 
             raise
