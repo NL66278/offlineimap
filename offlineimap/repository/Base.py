@@ -14,10 +14,8 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program; if not, write to the Free Software
 #    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
-
 import re
 import os.path
-import traceback
 from sys import exc_info
 from offlineimap import CustomConfig
 from offlineimap.ui import getglobalui
@@ -33,7 +31,9 @@ class BaseRepository(CustomConfig.ConfigHelperMixin, object):
         self.localeval = account.getlocaleval()
         self._accountname = self.account.getname()
         self._readonly = self.getconfboolean('readonly', False)
-        self.uiddir = os.path.join(self.config.getmetadatadir(), 'Repository-' + self.name)
+        self.uiddir = os.path.join(
+            self.config.getmetadatadir(), 'Repository-' + self.name
+        )
         if not os.path.exists(self.uiddir):
             os.mkdir(self.uiddir, 0o700)
         self.mapdir = os.path.join(self.uiddir, 'UIDMapping')
@@ -173,11 +173,13 @@ class BaseRepository(CustomConfig.ConfigHelperMixin, object):
         src_hash = {}
         for folder in src_folders:
             src_hash[folder.getvisiblename().replace(
-                    src_repo.getsep(), dst_repo.getsep())] = folder
+                src_repo.getsep(), dst_repo.getsep()
+            )] = folder
         dst_hash = {}
         for folder in dst_folders:
             dst_hash[folder.getvisiblename().replace(
-                    dst_repo.getsep(), src_repo.getsep())] = folder
+                dst_repo.getsep(), src_repo.getsep()
+            )] = folder
 
         # Find new folders on src_repo.
         for src_name_t, src_folder in src_hash.iteritems():
@@ -193,8 +195,11 @@ class BaseRepository(CustomConfig.ConfigHelperMixin, object):
                                   "Creating folder %s on repository %s" %\
                                       (src_name_t, dst_repo))
                     raise
-                status_repo.makefolder(src_name_t.replace(dst_repo.getsep(),
-                                                   status_repo.getsep()))
+                status_repo.makefolder(
+                    src_name_t.replace(
+                        dst_repo.getsep(), status_repo.getsep()
+                    )
+                )
         # Find new folders on dst_repo.
         for dst_name_t, dst_folder in dst_hash.iteritems():
             if not src_repo.get_create_folders():
@@ -207,9 +212,12 @@ class BaseRepository(CustomConfig.ConfigHelperMixin, object):
                 # 1) would src repo filter out the new folder name? In this
                 # case don't create it on it:
                 if not self.should_sync_folder(dst_name_t):
-                    self.ui.debug('', "Not creating folder '%s' (repository '%s"
+                    self.ui.debug(
+                        '',
+                        "Not creating folder '%s' (repository '%s"
                         "') as it would be filtered out on that repository." %
-                                  (dst_name_t, self))
+                        (dst_name_t, self)
+                    )
                     continue
                 # get IMAPFolder and see if the reverse nametrans
                 # works fine TODO: getfolder() works only because we
@@ -220,7 +228,8 @@ class BaseRepository(CustomConfig.ConfigHelperMixin, object):
                 newdst_name = folder.getvisiblename().replace(
                     src_repo.getsep(), dst_repo.getsep())
                 if dst_folder.name != newdst_name:
-                    raise OfflineImapError("INFINITE FOLDER CREATION DETECTED! "
+                    raise OfflineImapError(
+                        "INFINITE FOLDER CREATION DETECTED! "
                         "Folder '%s' (repository '%s') would be created as fold"
                         "er '%s' (repository '%s'). The latter becomes '%s' in "
                         "return, leading to infinite folder creation cycles.\n "
@@ -228,9 +237,15 @@ class BaseRepository(CustomConfig.ConfigHelperMixin, object):
                         "itories so they lead to identical names if applied bac"
                         "k and forth. 2) Use folderfilter settings on a reposit"
                         "ory to prevent some folders from being created on the "
-                        "other side." % (dst_folder.name, dst_repo, dst_name_t,
-                                         src_repo, newdst_name),
-                                           OfflineImapError.ERROR.REPO)
+                        "other side." % (
+                            dst_folder.name,
+                            dst_repo,
+                            dst_name_t,
+                            src_repo,
+                            newdst_name,
+                        ),
+                        OfflineImapError.ERROR.REPO
+                    )
                 # end sanity check, actually create the folder
                 try:
                     src_repo.makefolder(dst_name_t)
@@ -239,8 +254,11 @@ class BaseRepository(CustomConfig.ConfigHelperMixin, object):
                     self.ui.error(e, exc_info()[2], "Creating folder %s on "
                                   "repository %s" % (dst_name_t, src_repo))
                     raise
-                status_repo.makefolder(dst_name_t.replace(
-                                src_repo.getsep(), status_repo.getsep()))
+                status_repo.makefolder(
+                    dst_name_t.replace(
+                        src_repo.getsep(), status_repo.getsep()
+                    )
+                )
         # Find deleted folders.
         # TODO: We don't delete folders right now.
 
@@ -260,7 +278,7 @@ class BaseRepository(CustomConfig.ConfigHelperMixin, object):
         pass
 
     def getlocalroot(self):
-    	""" Local root folder for storing messages.
+        """ Local root folder for storing messages.
     	Will not be set for remote repositories."""
         return None
 
