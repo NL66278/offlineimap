@@ -15,9 +15,9 @@
 #    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
 
 try:
-    from ConfigParser import SafeConfigParser, Error, NoOptionError
+    from ConfigParser import SafeConfigParser, Error
 except ImportError: #python3
-    from configparser import SafeConfigParser, Error, NoOptionError
+    from configparser import SafeConfigParser, Error
 from offlineimap.localeval import LocalEval
 import os
 import re
@@ -33,7 +33,7 @@ class CustomConfigParser(SafeConfigParser):
 
     def getdefaultint(self, section, option, default, *args, **kwargs):
         if self.has_option(section, option):
-            return self.getint (*(section, option) + args, **kwargs)
+            return self.getint(*(section, option) + args, **kwargs)
         else:
             return default
 
@@ -50,7 +50,7 @@ class CustomConfigParser(SafeConfigParser):
             return default
 
     def getlist(self, section, option, separator_re):
-    	"""
+        """
     	Parses option as the list of values separated
     	by the given regexp.
 
@@ -69,7 +69,9 @@ class CustomConfigParser(SafeConfigParser):
             return default
 
     def getmetadatadir(self):
-        metadatadir = os.path.expanduser(self.getdefault("general", "metadata", "~/.offlineimap"))
+        metadatadir = os.path.expanduser(
+            self.getdefault("general", "metadata", "~/.offlineimap")
+        )
         if not os.path.exists(metadatadir):
             os.mkdir(metadatadir, 0o700)
         return metadatadir
@@ -117,7 +119,8 @@ class ConfigHelperMixin:
     will then return the configuration values for the ConfigParser
     object in the specific section."""
 
-    def _confighelper_runner(self, option, default, defaultfunc, mainfunc, *args):
+    def _confighelper_runner(
+            self, option, default, defaultfunc, mainfunc, *args):
         """Return config value for getsection()"""
         lst = [self.getsection(), option]
         if default == CustomConfigDefault:
@@ -127,29 +130,29 @@ class ConfigHelperMixin:
             return defaultfunc(*(lst + list(args)))
 
 
-    def getconf(self, option,
-                default = CustomConfigDefault):
+    def getconf(self, option, default=CustomConfigDefault):
         return self._confighelper_runner(option, default,
                                          self.getconfig().getdefault,
                                          self.getconfig().get)
 
-    def getconfboolean(self, option, default = CustomConfigDefault):
+    def getconfboolean(self, option, default=CustomConfigDefault):
         return self._confighelper_runner(option, default,
                                          self.getconfig().getdefaultboolean,
                                          self.getconfig().getboolean)
 
-    def getconfint(self, option, default = CustomConfigDefault):
+    def getconfint(self, option, default=CustomConfigDefault):
         return self._confighelper_runner(option, default,
                                          self.getconfig().getdefaultint,
                                          self.getconfig().getint)
 
-    def getconffloat(self, option, default = CustomConfigDefault):
+    def getconffloat(self, option, default=CustomConfigDefault):
         return self._confighelper_runner(option, default,
                                          self.getconfig().getdefaultfloat,
                                          self.getconfig().getfloat)
 
-    def getconflist(self, option, separator_re,
-                default = CustomConfigDefault):
-        return self._confighelper_runner(option, default,
-                                         self.getconfig().getdefaultlist,
-                                         self.getconfig().getlist, separator_re)
+    def getconflist(self, option, separator_re, default=CustomConfigDefault):
+        return self._confighelper_runner(
+            option, default,
+            self.getconfig().getdefaultlist,
+            self.getconfig().getlist, separator_re
+        )
