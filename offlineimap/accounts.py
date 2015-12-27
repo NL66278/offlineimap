@@ -225,7 +225,8 @@ class SyncableAccount(Account):
             self._lockfd.close()
             raise OfflineImapError(
                 "Could not lock account %s. Is another "
-                "instance using this account?" % self
+                "instance using this account?" % self,
+                OfflineImapError.ERROR.REPO, errcode=None
             )
 
     def _unlock(self):
@@ -531,10 +532,12 @@ def syncfolder(account, remotefolder, quick):
         localstart = localfolder.getstartdate()
         remotestart = remotefolder.getstartdate()
         if (maxage != None) + (localstart != None) + (remotestart != None) > 1:
-            raise OfflineImapError("You can set at most one of the "
+            raise OfflineImapError(
+                "You can set at most one of the "
                 "following: maxage, startdate (for the local folder), "
                 "startdate (for the remote folder)",
-                OfflineImapError.ERROR.REPO), None, exc_info()[2]
+                OfflineImapError.ERROR.REPO, errcode=None
+            )
         if (maxage != None or localstart or remotestart) and quick:
             # IMAP quickchanged isn't compatible with options that
             # involve restricting the messagelist, since the "quick"
