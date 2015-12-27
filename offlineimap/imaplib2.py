@@ -430,24 +430,24 @@ class IMAP4(object):
             af, socktype, proto, canonname, sa = res
             try:
                 s = socket.socket(af, socktype, proto)
-            except socket.error, msg:
+            except OSError as msg:
                 continue
             try:
                 for i in (0, 1):
                     try:
                         s.connect(sa)
                         break
-                    except socket.error, msg:
+                    except OSError as msg:
                         if len(msg.args) < 2 or msg.args[0] != errno.EINTR:
                             raise
                 else:
-                    raise socket.error(msg)
-            except socket.error, msg:
+                    raise OSerror(msg)
+            except OSError as msg:
                 s.close()
                 continue
             break
         else:
-            raise socket.error(msg)
+            raise OSError(msg)
 
         return s
 
@@ -2322,7 +2322,7 @@ if __name__ == '__main__':
 
     try:
         optlist, args = getopt.getopt(sys.argv[1:], 'd:il:s:p:')
-    except getopt.error, val:
+    except:
         optlist, args = (), ()
 
     debug, debug_buf_lvl, port, stream_command, keyfile, certfile, idle_intr = (None,)*7
