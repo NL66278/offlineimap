@@ -150,11 +150,14 @@ class WrappedIMAP4_SSL(UsefulIMAPMixIn, IMAP4_SSL):
         super(WrappedIMAP4_SSL, self).__init__(*args, **kwargs)
 
     def open(self, host=None, port=None):
-        if not self.ca_certs and not self._fingerprint:
-            raise OfflineImapError("No CA certificates " + \
-              "and no server fingerprints configured.  " + \
-              "You must configure at least something, otherwise " + \
-              "having SSL helps nothing.", OfflineImapError.ERROR.REPO)
+        if not self._fingerprint:
+            raise OfflineImapError(
+                "CA certificates for the moment not supported"
+                " and no server fingerprints configured.\n"
+                "You must configure at least something, otherwise"
+                "having SSL helps nothing.",
+                OfflineImapError.ERROR.REPO
+            )
         super(WrappedIMAP4_SSL, self).open(host, port)
         if self._fingerprint:
             # compare fingerprints
