@@ -163,7 +163,7 @@ class IMAPServer:
         authz = ''
         if self.user_identity != None:
             authz = self.user_identity
-        NULL = u'\x00'
+        NULL = '\x00'
         retval = NULL.join((authz, authc, passwd)).encode('utf-8')
         self.ui.debug('imap', '__plainhandler: returning %s' % retval)
         return retval
@@ -331,24 +331,26 @@ class IMAPServer:
                 exc_stack.append((m, e))
 
         if len(exc_stack):
-            msg = "\n\t".join(map(
-              lambda x: ": ".join((x[0], str(x[1]))),
-              exc_stack
-            ))
+            msg = "\n\t".join([
+                ": ".join((x[0], str(x[1])))
+                for x in exc_stack
+            ])
             raise OfflineImapError("All authentication types "
               "failed:\n\t%s" % msg, OfflineImapError.ERROR.REPO)
 
         if not tried_to_authn:
-            methods = ", ".join(map(
-              lambda x: x[5:], filter(lambda x: x[0:5] == "AUTH=",
-               imapobj.capabilities)
-            ))
+            methods = ", ".join([
+                x[5:]
+                for x in [
+                    x for x in imapobj.capabilities
+                    if x[0:5] == "AUTH="
+                ]
+            ])
             raise OfflineImapError("Repository %s: no supported "
               "authentication mechanisms found; configured %s, "
               "server advertises %s" % (self.repos,
               ", ".join(self.authmechs), methods),
               OfflineImapError.ERROR.REPO)
-
 
     # XXX: move above, closer to releaseconnection()
     def acquireconnection(self):

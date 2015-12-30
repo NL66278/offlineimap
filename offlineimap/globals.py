@@ -15,5 +15,5 @@ MonthNames = [
 Mon2num = dict(zip((x.encode() for x in MonthNames[1:]), range(1, 13)))
 
 def set_options (source):
-	""" Sets the source for options variable """
-	options.set_source (source)
+    """ Sets the source for options variable """
+    options.set_source (source)
