@@ -28,7 +28,7 @@ from hashlib import sha1
 
 from offlineimap.ui import getglobalui
 from offlineimap import OfflineImapError
-from imaplib import IMAP4, IMAP4_SSL IMAP4_PORT, InternalDate
+from imaplib import IMAP4, IMAP4_SSL, IMAP4_PORT, InternalDate
 from offlineimap.globals import Mon2num
 
 
