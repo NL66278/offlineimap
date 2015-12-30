@@ -392,27 +392,25 @@ class IMAPServer:
                 # Generate a new connection.
                 if self.tunnel:
                     self.ui.connecting('tunnel', self.tunnel)
-                    imapobj = imaplibutil.IMAP4_Tunnel(self.tunnel,
-                                                       timeout=socket.getdefaulttimeout())
+                    imapobj = imaplibutil.IMAP4_Tunnel(self.tunnel)
                     success = 1
                 elif self.usessl:
                     self.ui.connecting(self.hostname, self.port)
                     fingerprint = self.repos.get_ssl_fingerprint()
-                    imapobj = imaplibutil.WrappedIMAP4_SSL(self.hostname,
-                                                           self.port,
-                                                           self.sslclientkey,
-                                                           self.sslclientcert,
-                                                           self.sslcacertfile,
-                                                           self.__verifycert,
-                                                           self.sslversion,
-                                                           timeout=socket.getdefaulttimeout(),
-                                                           fingerprint=fingerprint
-                                                           )
+                    imapobj = imaplibutil.WrappedIMAP4_SSL(
+                        host=self.hostname,
+                        port=self.port,
+                        keyfile=self.sslclientkey,
+                        certfile=self.sslclientcert,
+                        ssl_context=None,
+                        fingerprint=fingerprint
+                    )
                 else:
                     self.ui.connecting(self.hostname, self.port)
-                    imapobj = imaplibutil.WrappedIMAP4(self.hostname, self.port,
-                                                       timeout=socket.getdefaulttimeout())
-
+                    imapobj = imaplibutil.WrappedIMAP4(
+                        host=self.hostname,
+                        port=self.port
+                    )
                 if not self.preauth_tunnel:
                     try:
                         self.__authn_helper(imapobj)
