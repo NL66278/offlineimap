@@ -23,11 +23,13 @@ import ssl
 import time
 import subprocess
 import threading
+import zlib
 from hashlib import sha1
 
 from offlineimap.ui import getglobalui
 from offlineimap import OfflineImapError
-from offlineimap.imaplib2 import IMAP4, IMAP4_SSL, zlib, IMAP4_PORT, InternalDate, Mon2num
+from imaplib import IMAP4, IMAP4_SSL IMAP4_PORT, InternalDate
+from offlineimap.globals import Mon2num
 
 
 class UsefulIMAPMixIn(object):

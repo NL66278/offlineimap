@@ -5,6 +5,12 @@ ChangeLog
 :website: http://offlineimap.org
 
 
+OfflineIMAP v6.5.6_pyhton3 (2015-12-30)
+=======================================
+
+* Use imaplib from standard library, to make for easy python3 compatibility.
+
+
 OfflineIMAP v6.5.6 (YYYY-MM-DD)
 ===============================
 
